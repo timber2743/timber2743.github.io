@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>女大学生沙龙室-全集播放与节目单解析</title>
+<meta name="description" content="女大学生沙龙室围绕校园对谈搭建的栏目，按主题期数整理全集播放顺序，梳理嘉宾名单、话题清单与往期回看入口，帮助观众按校园话题、嘉宾职业与时间线定位单集，并提供目录与说明。">
+<meta name="keywords" content="女大学生沙龙室">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237a4b2a'/%3E%3Ccircle cx='24' cy='26' r='7' fill='%23f4d9b8'/%3E%3Ccircle cx='42' cy='26' r='7' fill='%23f4d9b8'/%3E%3Cpath d='M16 46c4-8 12-12 16-12s12 4 16 12' stroke='%23f4d9b8' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --brand:#7a4b2a;
+  --brand-dark:#5a3520;
+  --brand-soft:#f3e4d6;
+  --accent:#2f6b5e;
+  --accent-soft:#e2efeb;
+  --warn:#a8452c;
+  --ink:#241c17;
+  --ink-2:#4a3d34;
+  --ink-3:#7b6c60;
+  --line:#e3d8cc;
+  --bg:#fbf8f4;
+  --card:#ffffff;
+  --radius-s:6px;
+  --radius-m:10px;
+  --radius-l:16px;
+  --shadow-s:0 1px 2px rgba(60,40,25,.06);
+  --shadow-m:0 4px 14px rgba(60,40,25,.09);
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;
+  --fs-xs:12px;--fs-s:14px;--fs-m:16px;--fs-l:18px;--fs-xl:22px;--fs-2xl:28px;--fs-3xl:34px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --sticky-h:104px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);
+  line-height:1.75;font-size:var(--fs-m);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand);text-decoration:none;}
+a:hover{color:var(--brand-dark);}
+img{max-width:100%;display:block;}
+h1,h2,h3,h4{line-height:1.35;margin:0;color:var(--ink);}
+p{margin:0 0 var(--space-3);}
+ul,ol{margin:0;padding-left:1.2em;}
+[id]{scroll-margin-top:calc(var(--sticky-h) + 12px);}
+
+/* ---------- 吸顶公告条 ---------- */
+.noticebar{
+  position:sticky;top:0;z-index:60;
+  background:var(--brand-dark);color:#f6e6d6;
+  font-size:var(--fs-s);
+}
+.noticebar .inner{
+  max-width:1180px;margin:0 auto;padding:7px var(--space-4);
+  display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap;
+}
+.noticebar .tag{
+  background:#f6e6d6;color:var(--brand-dark);border-radius:99px;
+  padding:1px 10px;font-size:var(--fs-xs);font-weight:700;letter-spacing:.5px;
+}
+.noticebar a{color:#ffe9d4;border-bottom:1px dashed rgba(255,233,212,.5);}
+.noticebar a:hover{color:#fff;}
+
+/* ---------- 吸顶页头 ---------- */
+.siteheader{
+  position:sticky;top:33px;z-index:50;
+  background:rgba(251,248,244,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.siteheader .inner{
+  max-width:1180px;margin:0 auto;padding:10px var(--space-4);
+  display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:var(--fs-l);color:var(--brand-dark);white-space:nowrap;}
+.brand svg{width:34px;height:34px;flex:none;}
+.brand:hover{color:var(--brand-dark);}
+.navmenu{display:flex;gap:2px;flex-wrap:wrap;flex:1;min-width:0;}
+.navmenu a{
+  font-size:var(--fs-s);padding:6px 9px;border-radius:var(--radius-s);color:var(--ink-2);
+}
+.navmenu a:hover{background:var(--brand-soft);color:var(--brand-dark);}
+.searchbox{display:flex;align-items:center;gap:0;border:1px solid var(--line);border-radius:99px;background:#fff;overflow:hidden;}
+.searchbox input{
+  border:0;outline:0;padding:7px 12px;font-size:var(--fs-s);width:150px;font-family:var(--font);background:transparent;color:var(--ink);
+}
+.searchbox button{
+  border:0;background:var(--brand);color:#fff;padding:7px 14px;font-size:var(--fs-s);cursor:pointer;font-family:var(--font);
+}
+.searchbox button:hover{background:var(--brand-dark);}
+.searchbox button:focus-visible,.navmenu a:focus-visible,.brand:focus-visible,.menu-toggle:focus-visible{
+  outline:3px solid var(--accent);outline-offset:2px;
+}
+.menu-toggle{
+  display:none;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;
+  padding:7px 12px;border-radius:var(--radius-s);font-family:var(--font);font-size:var(--fs-s);cursor:pointer;color:var(--ink-2);
+}
+.searchmsg{
+  max-width:1180px;margin:0 auto;padding:0 var(--space-4);font-size:var(--fs-s);color:var(--warn);
+}
+.searchmsg:empty{display:none;}
+.searchmsg[data-active="1"]{padding:6px var(--space-4) 8px;}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  max-width:1180px;margin:0 auto;padding:var(--space-7) var(--space-4) var(--space-6);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-6);align-items:center;
+}
+.hero .eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-xs);letter-spacing:2px;
+  color:var(--accent);font-weight:700;background:var(--accent-soft);padding:3px 12px;border-radius:99px;margin-bottom:var(--space-3);
+}
+.hero h1{font-size:var(--fs-3xl);margin-bottom:var(--space-3);letter-spacing:.5px;}
+.hero .lead{font-size:var(--fs-l);color:var(--ink-2);margin-bottom:var(--space-4);}
+.hero .lead strong{color:var(--brand-dark);}
+.hero-cta{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-5);}
+.btn{
+  display:inline-block;padding:10px 22px;border-radius:99px;font-size:var(--fs-s);font-weight:700;
+  transition:transform .15s ease, background .15s ease;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-s);}
+.btn-primary:hover{background:var(--brand-dark);color:#fff;transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--brand);color:var(--brand-dark);background:#fff;}
+.btn-ghost:hover{background:var(--brand-soft);transform:translateY(-2px);}
+.hero-stats{display:flex;gap:var(--space-5);flex-wrap:wrap;border-top:1px solid var(--line);padding-top:var(--space-4);}
+.hero-stats div{font-size:var(--fs-s);color:var(--ink-3);}
+.hero-stats b{display:block;font-size:var(--fs-xl);color:var(--brand-dark);line-height:1.2;font-weight:800;}
+.hero-visual{position:relative;min-height:290px;display:flex;align-items:center;justify-content:center;}
+.hero-visual svg{width:100%;max-width:380px;height:auto;filter:drop-shadow(0 10px 24px rgba(90,53,32,.12));}
+
+/* ---------- 通用版块壳 ---------- */
+.section{max-width:1180px;margin:0 auto;padding:var(--space-6) var(--space-4);}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-4);margin-bottom:var(--space-5);flex-wrap:wrap;}
+.section-head h2{font-size:var(--fs-2xl);position:relative;padding-left:14px;}
+.section-head h2::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:3px;background:var(--accent);
+}
+.section-head .desc{font-size:var(--fs-s);color:var(--ink-3);max-width:52ch;}
+.zone-divider{border-top:1px solid var(--line);}
+
+/* 主内容双栏 */
+.layout{max-width:1180px;margin:0 auto;padding:0 var(--space-4) var(--space-6);display:grid;grid-template-columns:1fr 300px;gap:var(--space-6);align-items:start;}
+.maincol{min-width:0;}
+.sidecol{min-width:0;display:flex;flex-direction:column;gap:var(--space-5);position:sticky;top:calc(var(--sticky-h) + 8px);}
+.sidecard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-4);box-shadow:var(--shadow-s);}
+.sidecard h3{font-size:var(--fs-m);margin-bottom:var(--space-3);color:var(--brand-dark);}
+.sidecard ul{list-style:none;padding:0;margin:0;}
+.sidecard li{margin-bottom:6px;font-size:var(--fs-s);}
+.sidecard li a{display:block;padding:3px 8px;border-radius:var(--radius-s);color:var(--ink-2);border-left:2px solid transparent;}
+.sidecard li a:hover{background:var(--brand-soft);color:var(--brand-dark);}
+.sidecard li a.active{border-left-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:700;}
+.sidecard .mini-note{font-size:var(--fs-xs);color:var(--ink-3);margin-top:var(--space-3);line-height:1.6;}
+
+/* ---------- 概览面板 ---------- */
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);}
+.ovcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-4);box-shadow:var(--shadow-s);}
+.ovcard h3{font-size:var(--fs-m);margin-bottom:6px;color:var(--brand-dark);}
+.ovcard p{font-size:var(--fs-s);color:var(--ink-2);margin:0;}
+
+/* ---------- 精选卡片网格 ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4);}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;
+  box-shadow:var(--shadow-s);display:flex;flex-direction:column;transition:transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m);}
+.card .thumb{aspect-ratio:16/9;width:100%;height:auto;object-fit:cover;background:var(--brand-soft);}
+.card .body{padding:var(--space-4);display:flex;flex-direction:column;gap:6px;flex:1;}
+.card h3{font-size:var(--fs-m);}
+.card .meta{font-size:var(--fs-xs);color:var(--ink-3);display:flex;gap:10px;flex-wrap:wrap;}
+.card p{font-size:var(--fs-s);color:var(--ink-2);margin:0;}
+.badge{display:inline-block;font-size:var(--fs-xs);background:var(--accent-soft);color:var(--accent);border-radius:99px;padding:1px 9px;font-weight:700;}
+.badge-warn{background:#f7e4de;color:var(--warn);}
+.badge-brand{background:var(--brand-soft);color:var(--brand-dark);}
+
+/* ---------- 紧凑列表 ---------- */
+.tightlist{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);box-shadow:var(--shadow-s);overflow:hidden;}
+.tightlist li{
+  display:grid;grid-template-columns:76px 1fr auto;gap:var(--space-3);align-items:center;
+  padding:12px var(--space-4);border-bottom:1px dashed var(--line);font-size:var(--fs-s);
+}
+.tightlist li:last-child{border-bottom:0;}
+.tightlist time{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;}
+.tightlist .t{color:var(--ink);}
+.tightlist .t b{font-weight:700;color:var(--brand-dark);}
+.tightlist .r{font-size:var(--fs-xs);color:var(--ink-3);white-space:nowrap;}
+
+/* ---------- 分类索引标签 ---------- */
+.tagindex{display:flex;flex-wrap:wrap;gap:10px;}
+.tagindex a{
+  display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:99px;
+  background:var(--card);border:1px solid var(--line);font-size:var(--fs-s);color:var(--ink-2);
+  transition:background .15s ease,border-color .15s ease;
+}
+.tagindex a:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);}
+.tagindex a span{font-size:var(--fs-xs);color:var(--ink-3);}
+
+/* ---------- 深度解析分栏正文 ---------- */
+.deep{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-l);padding:var(--space-5);
+  box-shadow:var(--shadow-s);
+}
+.deep h3{font-size:var(--fs-l);margin:var(--space-5) 0 var(--space-2);color:var(--brand-dark);}
+.deep h3:first-of-type{margin-top:0;}
+.deep .judgement{
+  border-left:4px solid var(--warn);background:#fbf1ed;padding:var(--space-3) var(--space-4);border-radius:0 var(--radius-s) var(--radius-s) 0;
+  font-size:var(--fs-s);color:var(--ink-2);margin:var(--space-3) 0;
+}
+.deep .judgement b{color:var(--warn);}
+.deep .checktable{width:100%;border-collapse:collapse;font-size:var(--fs-s);margin:var(--space-3) 0;background:#fff;}
+.deep .checktable th,.deep .checktable td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+.deep .checktable th{background:var(--brand-soft);color:var(--brand-dark);font-weight:700;}
+.deep p{color:var(--ink-2);font-size:var(--fs-m);}
+
+/* ---------- 体验指南编号步骤 ---------- */
+.steps{list-style:none;padding:0;margin:0;counter-reset:step;display:grid;gap:var(--space-3);}
+.steps li{
+  counter-increment:step;display:grid;grid-template-columns:40px 1fr;gap:var(--space-3);
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-4);box-shadow:var(--shadow-s);
+}
+.steps li::before{
+  content:counter(step);grid-row:span 2;width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:var(--fs-m);
+}
+.steps h3{font-size:var(--fs-m);margin-bottom:4px;}
+.steps p{font-size:var(--fs-s);color:var(--ink-2);margin:0;}
+
+/* ---------- 对照面板 ---------- */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);}
+.compare-panel{border-radius:var(--radius-m);padding:var(--space-4);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow-s);}
+.compare-panel h3{font-size:var(--fs-m);margin-bottom:var(--space-3);display:flex;align-items:center;gap:8px;}
+.compare-panel h3::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--accent);}
+.compare-panel.b h3::before{background:var(--warn);}
+.compare-panel ul{padding-left:1.1em;font-size:var(--fs-s);color:var(--ink-2);}
+.compare-panel li{margin-bottom:6px;}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:var(--space-2);}
+.faq details{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:0 var(--space-4);box-shadow:var(--shadow-s);
+}
+.faq summary{
+  cursor:pointer;padding:var(--space-4) 0;font-weight:700;font-size:var(--fs-m);color:var(--brand-dark);list-style:none;
+  display:flex;justify-content:space-between;gap:var(--space-3);align-items:flex-start;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";font-size:var(--fs-xl);color:var(--accent);line-height:1;transition:transform .15s;}
+.faq details[open] summary::after{transform:rotate(45deg);}
+.faq .ans{padding-bottom:var(--space-4);font-size:var(--fs-s);color:var(--ink-2);border-top:1px dashed var(--line);padding-top:var(--space-3);}
+.faq summary:focus-visible{outline:3px solid var(--accent);outline-offset:-2px;}
+
+/* ---------- 评论 ---------- */
+.comments{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4);}
+.comment{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-4);box-shadow:var(--shadow-s);display:flex;flex-direction:column;gap:8px;}
+.comment header{display:flex;align-items:center;gap:10px;font-size:var(--fs-s);}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--brand-soft);color:var(--brand-dark);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:var(--fs-xs);flex:none;}
+.comment .who b{display:block;font-size:var(--fs-s);color:var(--ink);}
+.comment .who span{font-size:var(--fs-xs);color:var(--ink-3);}
+.comment p{font-size:var(--fs-s);color:var(--ink-2);margin:0;}
+.comment .ref{font-size:var(--fs-xs);color:var(--accent);background:var(--accent-soft);border-radius:var(--radius-s);padding:3px 8px;align-self:flex-start;}
+.comment .stars{color:#c98a2e;font-size:var(--fs-xs);letter-spacing:2px;}
+
+/* ---------- 时间线 ---------- */
+.timeline{position:relative;padding-left:22px;margin:0;list-style:none;}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--brand-soft),var(--accent));}
+.timeline li{position:relative;margin-bottom:var(--space-4);font-size:var(--fs-s);}
+.timeline li::before{content:"";position:absolute;left:-21px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--brand);border:2px solid var(--bg);}
+.timeline b{color:var(--brand-dark);}
+.timeline time{display:block;font-size:var(--fs-xs);color:var(--accent);font-weight:700;}
+
+/* ---------- 引语卡 ---------- */
+.pullquote{
+  border:2px solid var(--brand-soft);background:linear-gradient(135deg,#fff,#fdf6ef);
+  border-radius:var(--radius-l);padding:var(--space-5);position:relative;
+}
+.pullquote p{font-size:var(--fs-l);color:var(--ink);font-style:italic;margin-bottom:var(--space-3);}
+.pullquote footer{font-size:var(--fs-s);color:var(--ink-3);text-align:right;}
+
+/* ---------- 推荐标签 ---------- */
+.recommend{display:flex;flex-wrap:wrap;gap:10px;}
+.recommend a{
+  font-size:var(--fs-s);padding:8px 14px;border-radius:var(--radius-s);background:var(--accent-soft);color:var(--accent);
+  font-weight:600;transition:background .15s ease, transform .15s ease;
+}
+.recommend a:hover{background:var(--accent);color:#fff;transform:translateY(-2px);}
+
+/* ---------- 榜单 ---------- */
+.ranklist{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;box-shadow:var(--shadow-s);}
+.ranklist li{display:flex;gap:var(--space-3);align-items:center;padding:12px var(--space-4);border-bottom:1px solid var(--line);font-size:var(--fs-s);}
+.ranklist li:last-child{border-bottom:0;}
+.ranklist .no{width:26px;height:26px;border-radius:50%;background:var(--brand-soft);color:var(--brand-dark);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:var(--fs-xs);flex:none;}
+.ranklist li:nth-child(1) .no{background:var(--brand);color:#fff;}
+.ranklist li:nth-child(2) .no{background:#c68f5c;color:#fff;}
+.ranklist li:nth-child(3) .no{background:#d9b28c;color:#fff;}
+.ranklist .n{flex:1;color:var(--ink);}
+.ranklist .score{color:var(--accent);font-weight:800;font-variant-numeric:tabular-nums;}
+
+/* ---------- 页脚 ---------- */
+.sitefooter{background:#2b211a;color:#d8c7b6;margin-top:var(--space-6);padding:var(--space-7) 0 var(--space-5);font-size:var(--fs-s);}
+.sitefooter .inner{max-width:1180px;margin:0 auto;padding:0 var(--space-4);}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:var(--space-5);}
+.sitefooter h3{color:#fff;font-size:var(--fs-m);margin-bottom:var(--space-3);}
+.sitefooter a{color:#cdb8a4;}
+.sitefooter a:hover{color:#fff;}
+.sitefooter ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:var(--fs-s);}
+.sitefooter .brandline{display:flex;align-items:center;gap:10px;font-weight:800;font-size:var(--fs-l);color:#fff;margin-bottom:var(--space-3);}
+.sitefooter .brandline svg{width:30px;height:30px;}
+.sitefooter .posline{max-width:34ch;line-height:1.7;color:#c4b1a0;}
+.footer-bottom{border-top:1px solid #45382e;margin-top:var(--space-6);padding-top:var(--space-4);display:flex;justify-content:space-between;gap:var(--space-3);flex-wrap:wrap;font-size:var(--fs-xs);color:#a3948a;}
+
+/* ---------- 回到顶部 ---------- */
+.totop{
+  position:fixed;right:18px;bottom:22px;z-index:70;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--brand);color:#fff;cursor:pointer;box-shadow:var(--shadow-m);
+  display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .2s ease, transform .2s ease, visibility .2s;
+}
+.totop.show{opacity:1;visibility:visible;transform:translateY(0);}
+.totop svg{width:20px;height:20px;}
+.totop:focus-visible{outline:3px solid var(--accent);outline-offset:2px;}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1023px){
+  .layout{grid-template-columns:1fr;}
+  .sidecol{position:static;order:2;display:grid;grid-template-columns:1fr 1fr;}
+  .hero{grid-template-columns:1fr;gap:var(--space-4);}
+  .hero-visual{min-height:220px;order:-1;}
+  .hero-visual svg{max-width:300px;}
+  .grid-3{grid-template-columns:repeat(2,1fr);}
+  .overview-grid{grid-template-columns:1fr 1fr;}
+  .description{max-width:60ch;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  :root{--sticky-h:96px;}
+  .siteheader{top:0;}
+  .noticebar{position:static;}
+  .navmenu{display:none;width:100%;flex-direction:column;padding:6px 0 10px;}
+  .navmenu.open{display:flex;}
+  .navmenu a{padding:9px 12px;border-radius:var(--radius-s);background:#fff;border:1px solid var(--line);}
+  .menu-toggle{display:inline-flex;}
+  .searchbox input{width:110px;}
+  .grid-3,.grid-2,.overview-grid,.comments,.compare,.sidecol{grid-template-columns:1fr;}
+  .hero h1{font-size:var(--fs-2xl);}
+  .hero{padding:var(--space-5) var(--space-4);}
+  .section{padding:var(--space-5) var(--space-4);}
+  .tightlist li{grid-template-columns:64px 1fr;gap:6px var(--space-2);}
+  .tightlist .r{grid-column:2;justify-self:start;}
+  .footer-grid{grid-template-columns:1fr;}
+  .totop{right:12px;bottom:14px;width:40px;height:40px;}
+  .hero-stats{gap:var(--space-4);}
+  .sitefooter{padding:var(--space-6) 0 var(--space-4);}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .card:hover,.btn:hover,.tagindex a:hover,.recommend a:hover,.totop{transition:none;transform:none;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"女大学生沙龙室",
+  "description":"校园对谈节目女大学生沙龙室的全集播放顺序与节目单整理，按主题期数、嘉宾背景与时间线定位单集。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"沙龙室全集播放应该按什么顺序看？",
+      "acceptedAnswer":{"@type":"Answer","text":"按录制期数顺序最稳，第1至第3期在2026年10月14日至10月28日连续录制，嘉宾话题互相呼应；若只看单集，建议先看标注为“毕业季特辑”的第9期，它汇总了前面嘉宾的共同判断。"}
+    },
+    {
+      "@type":"Question",
+      "name":"哪些期数涉及实习与就业话题？",
+      "acceptedAnswer":{"@type":"Answer","text":"第6期、第8期、第11期涉及实习与就业，其中第8期请到2026届秋招拿到三家offer的会计专业学生，第11期讨论非师范生考证路径，两期在2026年10月下旬上线。"}
+    },
+    {
+      "@type":"Question",
+      "name":"嘉宾名单在哪里核对？",
+      "acceptedAnswer":{"@type":"Answer","text":"每期简介页会列出嘉宾姓名、专业、年级和当期主话题，第4期之后的嘉宾还附有学校社团经历，可按“嘉宾名单”表逐条比对。"}
+    },
+    {
+      "@type":"Question",
+      "name":"能否只看文字版不看视频？",
+      "acceptedAnswer":{"@type":"Answer","text":"第5期至第12期均配有两千字左右的文字整理稿，标注了时间码，适合通勤或自习间隙阅读；第1至第4期只有视频记录。"}
+    }
+  ]
+}
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<div class="noticebar" id="notice">
+  <div class="inner">
+    <span class="tag">更新</span>
+    <span>第12期“宿舍关系边界谈”于 2026-11-06 上线，附文字稿；第13期录制时间定在 2026-11-10。</span>
+    <a href="/#latest">查看最新更新</a>
+  </div>
+</div>
+
+<header class="siteheader">
+  <div class="inner">
+    <a class="brand" href="/#top" aria-label="女大学生沙龙室 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="14" fill="#7a4b2a"/>
+        <circle cx="24" cy="25" r="7" fill="#f4d9b8"/>
+        <circle cx="44" cy="25" r="7" fill="#f4d9b8"/>
+        <path d="M14 47c4-9 13-13 18-13s14 4 18 13" fill="none" stroke="#f4d9b8" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      女大学生沙龙室
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navmenu" id="menuToggle">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      导航
+    </button>
+    <nav class="navmenu" id="navmenu" aria-label="主题导航">
+      <a href="/#overview">节目概览</a>
+      <a href="/#featured">精选期数</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#voices">观众评论</a>
+    </nav>
+    <form class="searchbox" role="search" id="searchForm">
+      <label for="siteSearch" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">站内搜索</label>
+      <input id="siteSearch" type="search" placeholder="搜期数、嘉宾、话题" autocomplete="off">
+      <button type="submit">查找</button>
+    </form>
+  </div>
+  <div class="searchmsg" id="searchMsg" role="status" aria-live="polite"></div>
+</header>
+
+<main id="top">
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <span class="eyebrow">校园对谈 · 按季更新</span>
+      <h1 id="hero-title">女大学生沙龙室</h1>
+      <p class="lead">把宿舍、教室、实习单位里发生的具体问题搬上桌面。<strong>12 期成片、9 位常驻嘉宾、每期 35—52 分钟</strong>，围绕课业安排、实习选择与人际边界展开，不设主持人口播广告。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#latest">看本期更新</a>
+        <a class="btn btn-ghost" href="/#guide">按顺序观看</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>12</b>已上线期数</div>
+        <div><b>9</b>常驻对谈嘉宾</div>
+        <div><b>8</b>主题频道</div>
+        <div><b>2026-11-06</b>最近更新</div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 360 300" role="img">
+        <defs>
+          <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f3e4d6"/>
+            <stop offset="1" stop-color="#e2efeb"/>
+          </linearGradient>
+        </defs>
+        <rect x="18" y="20" width="324" height="220" rx="20" fill="url(#gA)"/>
+        <rect x="42" y="44" width="130" height="12" rx="6" fill="#7a4b2a" opacity=".8"/>
+        <rect x="42" y="66" width="200" height="8" rx="4" fill="#7a4b2a" opacity=".35"/>
+        <rect x="42" y="84" width="168" height="8" rx="4" fill="#7a4b2a" opacity=".25"/>
+        <circle cx="70" cy="150" r="24" fill="#7a4b2a"/>
+        <circle cx="70" cy="143" r="9" fill="#f4d9b8"/>
+        <path d="M54 168c3-9 12-13 16-13s13 4 16 13" fill="#f4d9b8"/>
+        <circle cx="132" cy="150" r="24" fill="#2f6b5e"/>
+        <circle cx="132" cy="143" r="9" fill="#e2efeb"/>
+        <path d="M116 168c3-9 12-13 16-13s13 4 16 13" fill="#e2efeb"/>
+        <circle cx="194" cy="150" r="24" fill="#c68f5c"/>
+        <circle cx="194" cy="143" r="9" fill="#fff6ea"/>
+        <path d="M178 168c3-9 12-13 16-13s13 4 16 13" fill="#fff6ea"/>
+        <rect x="236" y="130" width="78" height="46" rx="10" fill="#fff" stroke="#e3d8cc"/>
+        <rect x="246" y="142" width="44" height="6" rx="3" fill="#7a4b2a" opacity=".55"/>
+        <rect x="246" y="154" width="58" height="6" rx="3" fill="#7a4b2a" opacity=".3"/>
+        <rect x="42" y="196" width="270" height="22" rx="11" fill="#fff" stroke="#e3d8cc"/>
+        <rect x="54" y="203" width="60" height="8" rx="4" fill="#2f6b5e" opacity=".7"/>
+        <rect x="126" y="203" width="90" height="8" rx="4" fill="#7a4b2a" opacity=".35"/>
+        <rect x="240" y="30" width="70" height="46" rx="12" fill="#7a4b2a" opacity=".9"/>
+        <text x="275" y="58" font-size="14" fill="#f4d9b8" text-anchor="middle" font-family="sans-serif">EP12</text>
+        <path d="M100 258h160M120 272h120" stroke="#7a4b2a" stroke-width="6" stroke-linecap="round" opacity=".18"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 概览 -->
+  <section class="section" id="overview" aria-labelledby="ov-title">
+    <div class="section-head">
+      <h2 id="ov-title">节目概览与观看入口</h2>
+      <p class="desc">先看结构，再挑单集。每一期围绕一个可被追问的校园场景，嘉宾以在校生和毕业三年内的校友为主。</p>
+    </div>
+    <div class="overview-grid">
+      <article class="ovcard">
+        <h3>录制与上线节奏</h3>
+        <p>每周录制一至两期，成片在录制后 3—5 天上线。2026 年 10 月至 11 月共上线 7 期，最新一期为 11 月 6 日发布的“宿舍关系边界谈”。</p>
+      </article>
+      <article class="ovcard">
+        <h3>单集长度与结构</h3>
+        <p>正片 35—52 分钟，前 6 分钟自我介绍与话题背景，中段以两两对谈为主，最后 8 分钟由嘉宾收束，每期固定列出三条可操作建议。</p>
+      </article>
+      <article class="ovcard">
+        <h3>常驻嘉宾构成</h3>
+        <p>汉语言、会计、视觉传达、社会工作四个专业各 2—3 人，年级跨越大一至研一。嘉宾姓名与专业可在每期简介页逐条核对。</p>
+      </article>
+      <article class="ovcard">
+        <h3>观看入口说明</h3>
+        <p>站内提供期数目录、文字稿与嘉宾名单三类信息，视频本体以嵌入形式展示，遇到无法播放时可在期数详情里找到备用说明。</p>
+      </article>
+      <article class="ovcard">
+        <h3>话题边界</h3>
+        <p>不讨论具体在校成绩排名与个人隐私细节，涉及学校内部制度的内容以公开文件引用为限，未核实说法会标注“转述”或“待核实”。</p>
+      </article>
+      <article class="ovcard">
+        <h3>检索方式</h3>
+        <p>顶部搜索框支持按期数编号、嘉宾姓名、专业和话题关键词查找，输入“实习”“会计”“宿舍”都能返回对应的期数与时间码。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 双栏主体 -->
+  <div class="layout">
+    <div class="maincol">
+
+      <!-- 精选 -->
+      <section id="featured" aria-labelledby="feat-title">
+        <div class="section-head">
+          <h2 id="feat-title">精选期数推荐</h2>
+          <p class="desc">优先看这四期，信息密度和话题延续性都高。</p>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/salon-ep09-graduation/640/360" width="640" height="360" loading="lazy" alt="毕业季特辑录制现场，三位嘉宾围坐讨论" style="object-fit:cover;">
+            <div class="body">
+              <div class="meta"><span class="badge badge-brand">第9期</span><span>2026-10-28 上线</span><span>48 分钟</span></div>
+              <h3>毕业季特辑：三方对谈毕业选择</h3>
+              <p>三名 2026 届毕业生分别选择考研、进入事务所、回家乡考编。节目把三种路径的时间成本摊开算，争议集中在二战备考的性价比上。</p>
+            </div>
+          </article>
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/salon-ep08-offer/640/360" width="640" height="360" loading="lazy" alt="会计专业学生分享秋招三份录用通知" style="object-fit:cover;">
+            <div class="body">
+              <div class="meta"><span class="badge badge-brand">第8期</span><span>2026-10-24 上线</span><span>42 分钟</span></div>
+              <h3>秋招录用通知怎么比较：会计专业案例</h3>
+              <p>嘉宾拿到杭州、宁波、合肥三家企业的录用通知，起薪差距约 1800 元，通勤与考证补贴差异被逐项列出，讨论因此有据可依。</p>
+            </div>
+          </article>
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/salon-ep11-certificate/640/360" width="640" height="360" loading="lazy" alt="非师范生讨论教师资格证备考资料" style="object-fit:cover;">
+            <div class="body">
+              <div class="meta"><span class="badge badge-brand">第11期</span><span>2026-11-02 上线</span><span>39 分钟</span></div>
+              <h3>非师范生的教资备考路线对照</h3>
+              <p>两位跨专业考生把笔试科目二的备考时长记成表格，分别是 96 小时与 61 小时，出现分差的原因被一条条追问。</p>
+            </div>
+          </article>
+          <article class="card">
+            <img class="thumb" src="https://picsum.photos/seed/salon-ep12-dorm/640/360" width="640" height="360" loading="lazy" alt="宿舍场景中讨论作息边界" style="object-fit:cover;">
+            <div class="body">
+              <div class="meta"><span class="badge badge-warn">最新</span><span>2026-11-06 上线</span><span>45 分钟</span></div>
+              <h3>宿舍晚归与噪音：边界怎么谈才落地</h3>
+              <p>三位不同作息的嘉宾把冲突场景拆成三段时间，从 23:10 回宿舍到次日早课，逐段列出沟通成本，也承认其中一种做法行不通。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="section" id="latest" style="padding-left:0;padding-right:0;" aria-labelledby="latest-title">
+        <div class="section-head">
+          <h2 id="latest-title">最新更新与上线记录</h2>
+          <p class="desc">按日期倒序，含本期说明与上周三条记录。</p>
+        </div>
+        <ol class="tightlist">
+          <li>
+            <time datetime="2026-11-06">11-06</time>
+            <span class="t"><b>第12期 宿舍关系边界谈</b>：录制于 11 月 3 日晚，嘉宾林知夏、周予、陈冉，正片 45 分钟，附两千字文字稿。</span>
+            <span class="r">已上线</span>
+          </li>
+          <li>
+            <time datetime="2026-11-02">11-02</time>
+            <span class="t"><b>第11期 非师范生教资备考路线</b>：含两张备考时长对照表，评论区集中在科目二背诵方法。</span>
+            <span class="r">已上线</span>
+          </li>
+          <li>
+            <time datetime="2026-10-28">10-28</time>
+            <span class="t"><b>第9期 毕业季特辑</b>：三人对谈，其中“二战备考”一段被观众引用最多，视频第 27 分 40 秒起。</span>
+            <span class="r">已上线</span>
+          </li>
+          <li>
+            <time datetime="2026-10-24">10-24</time>
+            <span class="t"><b>第8期 秋招录用通知对比</b>：会计专业案例，附带三家企业补贴细则的手抄整理。</span>
+            <span class="r">已上线</span>
+          </li>
+          <li>
+            <time datetime="2026-10-20">10-20</time>
+            <span class="t"><b>第7期 组队做课程项目的分工争议</b>：因嘉宾临时调整，本期录制改在下午，成片比预告晚了一天。</span>
+            <span class="r">已上线</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="section" id="channels" style="padding-left:0;padding-right:0;" aria-labelledby="ch-title">
+        <div class="section-head">
+          <h2 id="ch-title">分类入口</h2>
+          <p class="desc">按话题与形式拆分，点击进入对应期数集合。</p>
+        </div>
+        <div class="tagindex">
+          <a href="/#featured">实习与秋招选择 <span>5 期</span></a>
+          <a href="/#featured">宿舍关系与作息 <span>3 期</span></a>
+          <a href="/#featured">教资与考编路径 <span>4 期</span></a>
+          <a href="/#deep">跨专业考研准备 <span>3 期</span></a>
+          <a href="/#featured">小组作业分工 <span>2 期</span></a>
+          <a href="/#voices">文字稿与时间码 <span>8 期</span></a>
+          <a href="/#guide">嘉宾名单核对 <span>全部</span></a>
+          <a href="/#rank">按话题热度排序 <span>榜单</span></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section id="deep" aria-labelledby="deep-title">
+        <div class="section-head">
+          <h2 id="deep-title">深度解析</h2>
+          <p class="desc">围绕一个被反复提及的判断展开：秋招录用通知该不该只看起薪。</p>
+        </div>
+        <article class="deep">
+          <h3>先把三家企业的数字摊开</h3>
+          <p>第8期嘉宾李沐，会计专业，2026 届。她拿到三份录用通知：杭州某事务所审计助理，起薪 6200 元，含 400 元交通补贴，无住宿；宁波某制造企业财务岗，起薪 5500 元，提供员工宿舍；合肥某国企财务，起薪 5100 元，试用期六个月，转正后按考核浮动。三期数据都出现在视频第 8 分 12 秒至第 12 分 05 秒。</p>
+          <div class="judgement"><b>判断：</b>把通勤、住宿与考证补贴折算后，杭州那份的实际月成本比宁波高三到五百元，起薪优势因此被抵消。这个结论可核对——按她在视频里给出的地铁月票 260 元与合租报价 1900 元，扣减后只剩 4040 元。</div>
+          <h3>同一份通知，两种算账方式</h3>
+          <p>节目里林知夏用的是“到手现金流”口径，周予用的是“三年后证书进度”口径。前者把杭州方案排末位，后者反而把它排第一，因为事务所对注册会计师科目通过有一次性奖励，每科 1200 元，最多按五科计。两种算法都不算错，分歧在于是否把三年内的证书收益算进当期决策。</p>
+          <table class="checktable">
+            <caption style="caption-side:top;text-align:left;font-size:12px;color:#7b6c60;padding:4px 0;">三种口径下三份录用通知的排序（据第8期视频整理）</caption>
+            <thead>
+              <tr><th>口径</th><th>杭州事务所</th><th>宁波制造企业</th><th>合肥国企</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>到手现金流</td><td>4040 元／月</td><td>5500 元／月（住宿免费）</td><td>5100 元／月</td></tr>
+              <tr><td>三年证书收益</td><td>最高 +6000 元</td><td>无明确奖励</td><td>按职称另行计</td></tr>
+              <tr><td>通勤时间</td><td>单程 42 分钟</td><td>园区内步行 10 分钟</td><td>单程 25 分钟</td></tr>
+            </tbody>
+          </table>
+          <h3>争议点：宿舍折价怎么算</h3>
+          <p>宁波方案提供宿舍，节目里按周边同类型合租 900 元折价，这个数字来自 2026 年 10 月 18 日当地中介平台挂出的三套房源，不是估值。有人认为折价应更高，理由是宿舍免去水电网与押金；李沐当场回应说水电网仍要自付约 180 元，折价 900 元已把押金一次性成本摊薄，两边说法在节目里没有被强行统一。</p>
+          <p>更有意思的是后续。第9期毕业季特辑里，另一位嘉宾陈冉提到自己当年也遇到相似排序，最终选了起薪最低但通勤最短的岗位，一年后跳槽时这段经历反而成了谈薪依据。这条属于个人转述，样本只有一例，不能当规律用，但它至少说明：把选择当成一次性判决，容易忽略后续流动性。</p>
+          <div class="judgement"><b>可以拿去反驳的结论：</b>如果一份录用通知的起薪比同类高 600 元以上，且通勤单程不超过 30 分钟，那么它在三年内被跳槽市场的定价优势覆盖掉的可能性更大。第8期提供的数字支持这个说法，但样本只有三份通知、一个专业，推广到其他专业时证据不足。</div>
+        </article>
+      </section>
+
+      <!-- 观看指南 -->
+      <section class="section" id="guide" style="padding-left:0;padding-right:0;" aria-labelledby="guide-title">
+        <div class="section-head">
+          <h2 id="guide-title">体验指南</h2>
+          <p class="desc">第一次打开这个栏目的四步走法。</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>先确认期数编号与上线日期</h3>
+            <p>从“最新更新”向下看，每期标题前都有编号。第9期与第10期之间隔了 4 天，因为第10期换了录制场地，成片顺延，观看顺序不必因此调整。</p>
+          </li>
+          <li>
+            <h3>按话题筛，而不是按热度</h3>
+            <p>话题分类里“实习与秋招选择”有 5 期，密度最高；“小组作业分工”只有 2 期，但第1期与第7期跨越三个月，能看出嘉宾观点变化，适合对比看。</p>
+          </li>
+          <li>
+            <h3>需要引用时用文字稿</h3>
+            <p>第5期起的文字稿标注了时间码，每段前有 03:40 这类标记。引用嘉宾原话时，先对时间码，再核对当期简介里的嘉宾姓名，避免张冠李戴。</p>
+          </li>
+          <li>
+            <h3>看完一期，留一条具体评论</h3>
+            <p>评论鼓励指向具体条目的说法，比如对某个数字或某段处理方式有异议。指向节目本身的评论会沉得比较快，因为无法核对。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 对照面板 -->
+      <section id="compare" aria-labelledby="compare-title">
+        <div class="section-head">
+          <h2 id="compare-title">两种观看方式的差异</h2>
+          <p class="desc">视频与文字稿在信息密度上的取舍，直接影响你适不适合看这一期。</p>
+        </div>
+        <div class="compare">
+          <div class="compare-panel a">
+            <h3>视频版</h3>
+            <ul>
+              <li>能看到嘉宾停顿与语气变化，第12期里有一次明显的争执被打断，只在视频里可见。</li>
+              <li>适合第一次接触话题，35—52 分钟的时长在通勤时可以分两段看。</li>
+              <li>数字与时间码需要暂停抄录，第8期的对比表在画面停留只有 22 秒。</li>
+              <li>第1至第4期只有视频，想看这几期没有别的选择。</li>
+            </ul>
+          </div>
+          <div class="compare-panel b">
+            <h3>文字稿</h3>
+            <ul>
+              <li>第5期起提供，约两千字，保留关键数字与时间码，删去了寒暄与重复。</li>
+              <li>适合已经知道话题、只想抽取判断依据的读者，十分钟内可读完。</li>
+              <li>嘉宾的犹豫和语气无法呈现，有些“行不通”的结论看起来会比视频里更绝对。</li>
+              <li>引用时注意版本，文字稿在 11 月 4 日做过一次订正，改了两个数字。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq" style="padding-left:0;padding-right:0;" aria-labelledby="faq-title">
+        <div class="section-head">
+          <h2 id="faq-title">常见问答</h2>
+          <p class="desc">几个被问得最多的问题，答案都指向可核对的位置。</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>沙龙室全集播放应该从哪一期开始？</summary>
+            <div class="ans">按录制顺序从第1期开始最稳。第1期录制于 2026 年 10 月 14 日，话题是“大学第一年怎么过”，与第3期、第6期形成一条松散线索。如果时间有限，可以直接跳到第9期毕业季特辑，它把前面几期嘉宾的结论汇总了一次。</div>
+          </details>
+          <details>
+            <summary>哪些期数涉及实习与就业，怎么排序？</summary>
+            <div class="ans">第6期、第8期、第11期涉及实习与就业。第6期讲暑期实习怎么挑，第8期是会计专业秋招录用通知对比，第11期讨论非师范生考教资。三期上线时间都在 2026 年 10 月 24 日至 11 月 2 日之间，可以连着看。</div>
+          </details>
+          <details>
+            <summary>嘉宾名单在哪里核对，会不会重复请同一个人？</summary>
+            <div class="ans">每期简介页列出嘉宾姓名、专业、年级与当期主话题。常驻嘉宾中有两人在前四期都出现过，分别是林知夏和周予，嘉宾名单表里标注了出现期数，重复出场不算多，第7期之后只剩其中一人常驻。</div>
+          </details>
+          <details>
+            <summary>没有时间看视频，只看文字稿会不会漏掉争议？</summary>
+            <div class="ans">会漏掉一部分语气层面的冲突。第12期里有一段被其他嘉宾打断的争论，文字稿只保留了最终结论，没有保留来回交锋。若关注的是判断依据和数字，文字稿足够；若关注的是不同意见如何被处理，还是建议看视频第 31 分 12 秒之后的那段。</div>
+          </details>
+          <details>
+            <summary>节目里出现的数字可靠吗，有没有引用出处？</summary>
+            <div class="ans">节目内的薪资、通勤与备考时长多为嘉宾本人给出，属于个人申报数字。第8期的三份录用通知明细展示过截图要素，第11期的备考时长由嘉宾手写记录整理。节目没有做独立核实，涉及公开政策的部分如教资考试科目，会引用官方公告并标注日期。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 评论 -->
+      <section id="voices" aria-labelledby="voices-title">
+        <div class="section-head">
+          <h2 id="voices-title">观众评论</h2>
+          <p class="desc">来自期数详情页的留言，保留原话，含中性甚至相反的看法。</p>
+        </div>
+        <div class="comments">
+          <article class="comment">
+            <header>
+              <span class="avatar">吴</span>
+              <div class="who"><b>吴一舟</b><span>2026-11-07 留言</span></div>
+              <span class="stars" aria-label="评分 5 星">★★★★★</span>
+            </header>
+            <p>第8期那张对比表帮了大忙。我把杭州与宁波两列抄进自己的表格里，发现我漏算了考证奖励的发放条件，原话是“通过全部五科才能一次性兑付”，不是每科单独发。</p>
+            <span class="ref">指向：第8期 对比表</span>
+          </article>
+          <article class="comment">
+            <header>
+              <span class="avatar">唐</span>
+              <div class="who"><b>唐岚</b><span>2026-11-06 留言</span></div>
+              <span class="stars" aria-label="评分 3 星">★★★☆☆</span>
+            </header>
+            <p>宿舍那期听了两遍，还是觉得“把作息写进纸质约定”这个建议不太现实。真正难的是室友不肯坐下来谈，节目里没给出这一步的处理方式，只讲了谈成之后怎么执行。</p>
+            <span class="ref">指向：第12期 建议部分</span>
+          </article>
+          <article class="comment">
+            <header>
+              <span class="avatar">黎</span>
+              <div class="who"><b>黎可</b><span>2026-11-05 留言</span></div>
+              <span class="stars" aria-label="评分 4 星">★★★★☆</span>
+            </header>
+            <p>考教资那期说的科目二 96 小时对我有点参考性，不过我基础比她差，实际用了 120 小时左右才背完。时长本身可以照搬，但起点不同，别把它当标准。</p>
+            <span class="ref">指向：第11期 备考时长</span>
+          </article>
+          <article class="comment">
+            <header>
+              <span class="avatar">何</span>
+              <div class="who"><b>何与川</b><span>2026-11-04 留言</span></div>
+              <span class="stars" aria-label="评分 3 星">★★★☆☆</span>
+            </header>
+            <p>文字稿更新挺勤，但第7期关于小组作业分工的部分删得有点多，画面里嘉宾提到“评分细则不透明”那句没进文字稿，我是回头重看视频才发现的。</p>
+            <span class="ref">指向：第7期 文字稿</span>
+          </article>
+          <article class="comment">
+            <header>
+              <span class="avatar">沈</span>
+              <div class="who"><b>沈凉</b><span>2026-11-03 留言</span></div>
+              <span class="stars" aria-label="评分 4 星">★★★★☆</span>
+            </header>
+            <p>整体节奏比想象中慢，前六分钟基本在介绍背景。对已经在实习的人来说有点多余，但对大一的同学应该刚好。分段标记要能再明显一点就好了。</p>
+            <span class="ref">指向：整体节奏</span>
+          </article>
+          <article class="comment">
+            <header>
+              <span class="avatar">郑</span>
+              <div class="who"><b>郑行舟</b><span>2026-11-01 留言</span></div>
+              <span class="stars" aria-label="评分 5 星">★★★★★</span>
+            </header>
+            <p>毕业季特辑里陈冉说“先选通勤最短的岗位，一年后再谈价”，这句我照做了，确实在第二次面试时被问到了前一份工作的具体产出，比空谈规划有用。</p>
+            <span class="ref">指向：第9期 陈冉发言</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="section" id="news" style="padding-left:0;padding-right:0;" aria-labelledby="news-title">
+        <div class="section-head">
+          <h2 id="news-title">相关资讯</h2>
+          <p class="desc">与话题相关的校内公告与行业节点，标注日期便于核对。</p>
+        </div>
+        <ul class="tightlist">
+          <li>
+            <time datetime="2026-11-05">11-05</time>
+            <span class="t"><b>秋招补录窗口</b>：多地企业补录集中在 11 月中上旬，第8期嘉宾提到的一家事务所补录截止 11 月 15 日。</span>
+            <span class="r">行业节点</span>
+          </li>
+          <li>
+            <time datetime="2026-11-03">11-03</time>
+            <span class="t"><b>教资面试报名</b>：2026 年下半年面试报名时段公布，第11期的备考路线可以接到面试环节继续用。</span>
+            <span class="r">考试安排</span>
+          </li>
+          <li>
+            <time datetime="2026-10-30">10-30</time>
+            <span class="t"><b>宿舍管理办法修订</b>：某高校发布住宿管理规定修订稿，晚归登记方式调整，第12期讨论的边界问题与之相关。</span>
+            <span class="r">校内公告</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 榜单 -->
+      <section id="rank" aria-labelledby="rank-title">
+        <div class="section-head">
+          <h2 id="rank-title">按话题热度排序</h2>
+          <p class="desc">依据期数详情页的收藏与评论提及次数，统计截止 2026-11-07。</p>
+        </div>
+        <ol class="ranklist">
+          <li><span class="no">1</span><span class="n">第8期 秋招录用通知怎么比较（会计专业案例）</span><span class="score">96</span></li>
+          <li><span class="no">2</span><span class="n">第12期 宿舍晚归与噪音：边界怎么谈才落地</span><span class="score">91</span></li>
+          <li><span class="no">3</span><span class="n">第9期 毕业季特辑：三方对谈毕业选择</span><span class="score">88</span></li>
+          <li><span class="no">4</span><span class="n">第11期 非师范生的教资备考路线对照</span><span class="score">74</span></li>
+          <li><span class="no">5</span><span class="n">第7期 组队做课程项目的分工争议</span><span class="score">63</span></li>
+        </ol>
+      </section>
+
+      <!-- 时间线 -->
+      <section id="timeline" aria-labelledby="tl-title">
+        <div class="section-head">
+          <h2 id="tl-title">近一个月录制时间线</h2>
+          <p class="desc">用于核对上线记录与录制排期之间的间隔。</p>
+        </div>
+        <ol class="timeline">
+          <li><time datetime="2026-10-14">10-14</time><b>第1期录制</b>，话题“大学第一年怎么过”，地点在文科楼三层讨论室。</li>
+          <li><time datetime="2026-10-18">10-18</time><b>第3期补录</b>，因嘉宾时间冲突，与第2期错开四天录制。</li>
+          <li><time datetime="2026-10-24">10-24</time><b>第8期上线</b>，同期录制于 10 月 21 日，剪辑用了三天。</li>
+          <li><time datetime="2026-10-31">10-31</time><b>第10期换场地</b>，原定录制室被占用，改到图书馆研讨间，音轨有轻微回声。</li>
+          <li><time datetime="2026-11-03">11-03</time><b>第12期录制</b>，三位嘉宾全程在座，没有中场休息。</li>
+          <li><time datetime="2026-11-10">11-10</time><b>第13期录制预告</b>，话题定为“转专业后的补课压力”，暂定两位嘉宾。</li>
+        </ol>
+      </section>
+
+      <!-- 引语 -->
+      <section id="quote" aria-labelledby="quote-title">
+        <div class="section-head">
+          <h2 id="quote-title">嘉宾原话</h2>
+        </div>
+        <div class="pullquote">
+          <p>“我们那次谈宿舍，谈了三次才把时间定下来，前两次都是有人在忙。后来发现，能把人凑齐本身就是最难的一步。”</p>
+          <footer>—— 第12期嘉宾 陈冉，录制于 2026-11-03</footer>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="section" id="recommend" style="padding-left:0;padding-right:0;" aria-labelledby="rec-title">
+        <div class="section-head">
+          <h2 id="rec-title">相关推荐</h2>
+          <p class="desc">按你可能接着想查的方向给出入口。</p>
+        </div>
+        <div class="recommend">
+          <a href="/#featured">会计专业秋招面试题整理</a>
+          <a href="/#deep">起薪与通勤时间怎么折算</a>
+          <a href="/#featured">非师范生教资科目二背诵顺序</a>
+          <a href="/#featured">宿舍作息约定的写法</a>
+          <a href="/#guide">嘉宾名单与出勤记录</a>
+          <a href="/#compare">视频版与文字稿差异</a>
+          <a href="/#faq">文字稿订正记录</a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="sidecol" aria-label="侧栏导航与补充">
+      <div class="sidecard">
+        <h3>本期目录</h3>
+        <nav aria-label="侧栏栏目导航">
+          <ul>
+            <li><a href="/#overview">节目概览</a></li>
+            <li><a href="/#featured">精选期数</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#channels">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见问答</a></li>
+            <li><a href="/#voices">观众评论</a></li>
+            <li><a href="/#rank">话题榜单</a></li>
+          </ul>
+        </nav>
+        <p class="mini-note">侧栏目录会随滚动高亮当前栏目，点击直达并预留吸顶高度。</p>
+      </div>
+      <div class="sidecard">
+        <h3>近期更新</h3>
+        <ul>
+          <li><a href="/#latest">11-06 第12期 宿舍边界</a></li>
+          <li><a href="/#latest">11-02 第11期 教资备考</a></li>
+          <li><a href="/#latest">10-28 第9期 毕业季特辑</a></li>
+          <li><a href="/#latest">10-24 第8期 秋招对比</a></li>
+        </ul>
+      </div>
+      <div class="sidecard">
+        <h3>数据说明</h3>
+        <p class="mini-note">期数、嘉宾与上线日期为栏目示例数据；薪资与备考时长为嘉宾个人申报，节目未作独立核实。热度分统计口径见榜单说明，截止 2026-11-07。</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="sitefooter">
+  <div class="inner">
+    <div class="footer-grid">
+      <div>
+        <div class="brandline">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#7a4b2a"/><circle cx="24" cy="25" r="7" fill="#f4d9b8"/><circle cx="44" cy="25" r="7" fill="#f4d9b8"/><path d="M14 47c4-9 13-13 18-13s14 4 18 13" fill="none" stroke="#f4d9b8" stroke-width="4" stroke-linecap="round"/></svg>
+          女大学生沙龙室
+        </div>
+        <p class="posline">把校园里的具体难题拆成可讨论的段落，按话题、期数与时间线整理成一份能查的目录。</p>
+      </div>
+      <div>
+        <h3>话题入口</h3>
+        <ul>
+          <li><a href="/#featured">实习与秋招选择</a></li>
+          <li><a href="/#featured">宿舍关系与作息</a></li>
+          <li><a href="/#featured">教资与考编路径</a></li>
+          <li><a href="/#deep">跨专业考研准备</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>使用帮助</h3>
+        <ul>
+          <li><a href="/#guide">观看顺序指南</a></li>
+          <li><a href="/#compare">视频与文字稿</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#timeline">录制时间线</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>内容说明</h3>
+        <ul>
+          <li><a href="/#rank">热度统计口径</a></li>
+          <li><a href="/#news">相关资讯来源</a></li>
+          <li><a href="/#voices">评论展示规则</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>页面更新时间 2026-11-07，对应更新项：第12期上线与第11期文字稿订正。</span>
+      <span>示例数据说明：期数、嘉宾与日期为栏目示例，薪资与时长以嘉宾申报为准。© 2026 女大学生沙龙室</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor"/></svg>
+</button>
+
+<script>
+(function(){
+  // 移动端菜单
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('navmenu');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.matchMedia('(max-width:767px)').matches){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // 本地搜索
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('siteSearch');
+  var msg = document.getElementById('searchMsg');
+  var searchables = Array.prototype.slice.call(document.querySelectorAll('.card, .tightlist li, .faq details, .ranklist li, .comment, .timeline li, .recommend a, .sidecard li'));
+
+  function norm(s){ return (s||'').replace(/\s+/g,'').toLowerCase(); }
+
+  function runSearch(q){
+    var key = norm(q);
+    if(!key){
+      msg.textContent='';
+      msg.removeAttribute('data-active');
+      searchables.forEach(function(el){ el.style.display=''; });
+      return;
+    }
+    var hits = [];
+    searchables.forEach(function(el){
+      var text = norm(el.textContent);
+      if(text.indexOf(key) !== -1){
+        el.style.display='';
+        hits.push(el);
+      }else{
+        el.style.display='none';
+      }
+    });
+    if(hits.length === 0){
+      msg.setAttribute('data-active','1');
+      msg.textContent = '没有找到与“' + q + '”匹配的期数、嘉宾或话题，换一个关键词试试，例如“实习”“教资”“宿舍”。';
+    }else{
+      msg.setAttribute('data-active','1');
+      msg.textContent = '找到 ' + hits.length + ' 条与“' + q + '”相关的内容。';
+      hits[0].scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  }
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      runSearch(input.value.trim());
+    });
+    input.addEventListener('input', function(){
+      if(input.value.trim() === ''){ runSearch(''); }
+    });
+  }
+
+  // 侧栏滚动高亮
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('.sidecard nav a'));
+  var targets = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlightSide(){
+    var pos = window.scrollY + 160;
+    var current = -1;
+    targets.forEach(function(t, i){
+      if(t && t.offsetTop <= pos){ current = i; }
+    });
+    sideLinks.forEach(function(a, i){
+      a.classList.toggle('active', i === current);
+    });
+  }
+  window.addEventListener('scroll', highlightSide, {passive:true});
+  highlightSide();
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  function toggleTop(){
+    if(window.scrollY > 500){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', toggleTop, {passive:true});
+  toggleTop();
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
