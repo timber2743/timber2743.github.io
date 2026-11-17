@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>166 fun每日大赛-每日主题挑战赛程与规则</title>
+<meta name="description" content="166 fun每日大赛是每天一轮的主题创作挑战赛，覆盖插画、摄影、文案、短视频四类赛道，公布当日命题、评审口径、参赛流程与积分榜，报名与作品提交当日晚八点截止。">
+<meta name="keywords" content="166 fun每日大赛">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b2a52'/%3E%3Cpath d='M9 21V11h3l3.5 5.6L19 11h3v10h-3v-5.4L15.8 20h-.6l-3.2-4.4V21z' fill='%23ffb020'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#141b2b;
+  --ink-2:#2c374f;
+  --muted:#5c687f;
+  --line:#dfe4ee;
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --brand:#1b2a52;
+  --brand-soft:#e8ecf7;
+  --accent:#e2632a;
+  --accent-soft:#fdeee5;
+  --gold:#ffb020;
+  --green:#1f7a53;
+  --green-soft:#e3f4ec;
+  --radius:12px;
+  --radius-s:8px;
+  --shadow:0 2px 10px rgba(20,27,43,.07);
+  --shadow-l:0 10px 30px rgba(20,27,43,.12);
+  --space:clamp(14px,2vw,22px);
+  --font:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --maxw:1160px;
+  --head-h:58px;
+  --bar-h:36px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);
+  line-height:1.75;font-size:16px;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0}
+p{margin:0 0 .8em}
+p:last-child{margin-bottom:0}
+ul,ol{margin:0 0 .8em;padding-left:1.25em}
+li{margin-bottom:.35em}
+section[id]{scroll-margin-top:calc(var(--bar-h) + var(--head-h) + 14px)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(14px,3vw,28px)}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:10px 16px;z-index:200;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+
+/* ---------- announcement + header ---------- */
+.sticky-top{position:sticky;top:0;z-index:100}
+.announce{
+  height:var(--bar-h);background:var(--brand);color:#e9edf7;font-size:13px;
+  display:flex;align-items:center;overflow:hidden;
+}
+.announce .wrap{display:flex;align-items:center;gap:10px;width:100%}
+.announce b{color:var(--gold);font-weight:600;white-space:nowrap}
+.announce span.t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+@media(max-width:520px){.announce{font-size:12px}.announce .hide-s{display:none}}
+
+header.site{
+  height:var(--head-h);background:rgba(255,255,255,.96);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(20,27,43,.03);
+}
+header.site .wrap{display:flex;align-items:center;gap:18px;height:100%}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--brand);letter-spacing:.2px;font-size:17px;white-space:nowrap}
+.brand svg{flex:0 0 auto}
+.brand:hover{text-decoration:none}
+nav.main{display:flex;gap:4px;flex:1;min-width:0;overflow:hidden}
+nav.main a{
+  padding:6px 10px;border-radius:99px;font-size:14.5px;color:var(--ink-2);white-space:nowrap;
+}
+nav.main a:hover{background:var(--brand-soft);text-decoration:none}
+nav.main a.active{background:var(--brand-soft);color:var(--brand);font-weight:600}
+.head-tools{display:flex;align-items:center;gap:8px}
+.searchbox{display:flex;align-items:center;border:1px solid var(--line);border-radius:99px;background:#fff;padding:2px 4px 2px 12px}
+.searchbox input{border:0;outline:0;background:transparent;font:inherit;font-size:14px;width:132px;color:var(--ink);padding:4px 0}
+.searchbox button{border:0;background:var(--brand);color:#fff;border-radius:99px;font:inherit;font-size:13px;padding:5px 12px;cursor:pointer}
+.searchbox button:hover{background:#25376b}
+.menu-btn{
+  display:none;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;color:var(--ink);
+  border-radius:8px;padding:7px 10px;font:inherit;font-size:14px;cursor:pointer;
+}
+.menu-btn:focus-visible,.searchbox button:focus-visible,nav.main a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:900px){
+  nav.main{
+    display:none;position:absolute;top:calc(var(--bar-h) + var(--head-h));left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow-l);
+    padding:10px 16px;flex-wrap:wrap;gap:6px;overflow:visible;
+  }
+  nav.main.open{display:flex}
+  .menu-btn{display:inline-flex}
+  .searchbox input{width:96px}
+}
+@media(max-width:560px){
+  .searchbox{display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;color:#f2f5ff;
+  background:
+    radial-gradient(900px 420px at 82% -10%,rgba(226,99,42,.30),transparent 60%),
+    radial-gradient(700px 380px at 8% 110%,rgba(255,176,32,.22),transparent 62%),
+    linear-gradient(160deg,#1b2a52 0%,#243259 55%,#1a2340 100%);
+  border-bottom:1px solid #0f1730;
+}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(18px,4vw,48px);padding-top:clamp(30px,5vw,58px);padding-bottom:clamp(30px,5vw,58px);align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.6px;color:var(--gold);border:1px solid rgba(255,176,32,.45);border-radius:99px;padding:4px 12px;margin-bottom:16px}
+.hero h1{font-size:clamp(26px,4.4vw,42px);letter-spacing:.5px;color:#fff;margin-bottom:14px}
+.hero p.lead{color:#c9d3ea;font-size:clamp(15px,1.6vw,17px);max-width:52ch;margin-bottom:22px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:99px;padding:10px 20px;font-size:15px;font-weight:600;border:1px solid transparent;transition:transform .18s,background .18s}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#c9521f}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#eaf0ff}
+.btn-ghost:hover{background:rgba(255,255,255,.09)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:22px;margin-top:26px;border-top:1px solid rgba(255,255,255,.16);padding-top:16px}
+.hero-stats div{min-width:88px}
+.hero-stats b{display:block;font-size:22px;color:#fff;font-weight:800;letter-spacing:.4px}
+.hero-stats small{color:#9fb0d4;font-size:12.5px}
+.hero-art{position:relative;height:clamp(230px,26vw,320px)}
+.hero-art svg{width:100%;height:100%;overflow:visible}
+.hero-badge{
+  position:absolute;right:4px;bottom:2px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.25);
+  backdrop-filter:blur(4px);border-radius:10px;padding:8px 12px;font-size:12.5px;color:#dfe7f8;line-height:1.5;
+}
+.hero-badge b{color:var(--gold)}
+@media(max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{order:2;height:200px}
+}
+
+/* ---------- layout ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(18px,3vw,34px);padding-top:clamp(24px,4vw,44px);padding-bottom:56px;align-items:start}
+@media(max-width:980px){.layout{grid-template-columns:1fr}.aside{order:2}}
+.main-col{min-width:0}
+
+.block{margin-bottom:clamp(28px,4vw,46px)}
+.block > h2{
+  font-size:clamp(19px,2.4vw,23px);display:flex;align-items:center;gap:10px;margin-bottom:6px;
+}
+.block > h2::before{content:"";width:5px;height:20px;background:var(--accent);border-radius:3px;flex:0 0 auto}
+.block .sub{color:var(--muted);font-size:14px;margin:2px 0 16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(14px,2.4vw,22px);box-shadow:var(--shadow)}
+
+/* tag index */
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{margin:0}
+.tags a{display:inline-block;background:var(--brand-soft);color:var(--brand);font-size:13.5px;padding:5px 12px;border-radius:99px}
+.tags a:hover{background:#d7dff3;text-decoration:none}
+.tags a.hot{background:var(--accent-soft);color:#b4451a}
+
+/* overview grid */
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media(max-width:760px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;
+  transition:transform .18s,box-shadow .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-l)}
+.card h3{font-size:16px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--muted);margin:0}
+.card .meta{display:block;margin-top:8px;font-size:12.5px;color:var(--muted)}
+
+/* feature list */
+.feature{display:grid;grid-template-columns:1fr;gap:0}
+.fcard{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.fcard:last-child{border-bottom:0;padding-bottom:0}
+.fcard:first-child{padding-top:0}
+.fcard img{width:96px;height:76px;object-fit:cover;border-radius:var(--radius-s);background:#e9edf6}
+.fcard h3{font-size:16px;margin-bottom:4px}
+.fcard p{font-size:14px;color:var(--muted);margin:0 0 6px}
+.fcard .meta{font-size:12.5px;color:var(--muted)}
+.pill{display:inline-block;font-size:12px;padding:1px 8px;border-radius:99px;background:var(--brand-soft);color:var(--brand);margin-right:6px}
+.pill.warn{background:var(--accent-soft);color:#b4451a}
+.pill.ok{background:var(--green-soft);color:var(--green)}
+
+/* updates list */
+.updates{list-style:none;margin:0;padding:0}
+.updates li{display:grid;grid-template-columns:78px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.updates li:last-child{border-bottom:0}
+.updates time{color:var(--muted);font-size:13px;white-space:nowrap}
+
+/* channels */
+.channels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media(max-width:960px){.channels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.channels a{
+  display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:12px;font-size:14px;font-weight:600;color:var(--ink-2);
+}
+.channels a span{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:3px}
+.channels a:hover{border-color:#b9c4dd;text-decoration:none;background:#fbfcff}
+
+/* deep read */
+.article h3{font-size:17px;margin:22px 0 8px}
+.article h3:first-child{margin-top:0}
+.article p{font-size:15.5px}
+.article blockquote{
+  margin:16px 0;padding:12px 16px;background:#f4f6fc;border-left:4px solid var(--brand);
+  border-radius:0 var(--radius-s) var(--radius-s) 0;font-size:14.5px;color:var(--ink-2);
+}
+.article table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+.article th,.article td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.article th{background:#f2f5fb;font-weight:600;white-space:nowrap}
+.checklist{list-style:none;padding:0;margin:10px 0}
+.checklist li{padding-left:26px;position:relative;font-size:15px;margin-bottom:8px}
+.checklist li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:700}
+
+/* steps */
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);font-size:14.5px}
+.steps li::before{
+  content:counter(s);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.steps b{color:var(--ink)}
+
+/* compare */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.compare > div{padding:16px}
+.compare > div:first-child{background:#fbfcff;border-right:1px solid var(--line)}
+.compare h4{font-size:14.5px;margin-bottom:8px;color:var(--brand)}
+.compare ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-2)}
+@media(max-width:640px){.compare{grid-template-columns:1fr}.compare > div:first-child{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* FAQ */
+details.faq{border:1px solid var(--line);border-radius:var(--radius-s);background:var(--card);margin-bottom:10px;overflow:hidden}
+details.faq summary{
+  cursor:pointer;padding:12px 16px;font-weight:600;font-size:15px;list-style:none;position:relative;padding-right:42px;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:20px;line-height:1}
+details.faq[open] summary::after{content:"–"}
+details.faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+details.faq .a{padding:0 16px 14px;font-size:14.5px;color:var(--ink-2);border-top:1px dashed var(--line);margin-top:0;padding-top:12px}
+
+/* comments */
+.comments{display:grid;gap:12px}
+.comment{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.comment .who{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);margin-bottom:6px}
+.comment .who b{color:var(--ink);font-weight:700}
+.comment p{font-size:14.5px;margin:0}
+.avatar{width:26px;height:26px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:0 0 auto}
+
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0 0 0 20px;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 16px 14px;font-size:14.5px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-27px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid #fff}
+.timeline time{display:block;font-size:12.5px;color:var(--muted)}
+
+/* sidebar */
+.aside{display:grid;gap:16px}
+@media(min-width:981px){.aside{position:sticky;top:calc(var(--bar-h) + var(--head-h) + 18px)}}
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.side-card h2{font-size:15.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.side-card h2::before{content:"";width:4px;height:16px;background:var(--brand);border-radius:2px}
+.side-nav{list-style:none;margin:0;padding:0;font-size:14px;border-left:1px solid var(--line)}
+.side-nav li{margin:0}
+.side-nav a{display:block;padding:6px 0 6px 12px;color:var(--ink-2);border-left:2px solid transparent;margin-left:-1px}
+.side-nav a:hover{color:var(--brand);text-decoration:none}
+.side-nav a.on{color:var(--accent);border-left-color:var(--accent);font-weight:600}
+.rank{list-style:none;margin:0;padding:0;font-size:14px}
+.rank li{display:flex;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--line)}
+.rank li:last-child{border-bottom:0}
+.rank .num{font-weight:800;color:var(--accent);width:18px;flex:0 0 auto;font-size:13px}
+.rank .n{flex:1;min-width:0}
+.rank .v{color:var(--muted);font-size:12.5px;white-space:nowrap}
+.side-search{display:flex;gap:6px;margin-bottom:8px}
+.side-search input{flex:1;min-width:0;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:inherit;font-size:14px;outline:0}
+.side-search input:focus{border-color:var(--brand)}
+.side-search button{border:0;background:var(--brand);color:#fff;border-radius:8px;padding:7px 12px;font:inherit;font-size:14px;cursor:pointer}
+.search-feedback{font-size:13px;color:var(--accent);min-height:18px}
+.side-links{display:flex;flex-wrap:wrap;gap:8px}
+.side-links a{font-size:13px;background:#f2f4fa;border-radius:99px;padding:4px 10px;color:var(--ink-2)}
+.side-links a:hover{background:var(--brand-soft);color:var(--brand);text-decoration:none}
+
+/* footer */
+footer.site{background:#141b2b;color:#b7c2da;font-size:14px;margin-top:20px}
+footer.site .wrap{padding-top:clamp(26px,4vw,42px);padding-bottom:22px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(18px,3vw,36px);margin-bottom:26px}
+@media(max-width:820px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+.foot-brand{display:flex;align-items:center;gap:9px;color:#fff;font-weight:800;font-size:17px;margin-bottom:10px}
+.foot-grid h3{color:#fff;font-size:14.5px;margin-bottom:10px;letter-spacing:.4px}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot-grid a{color:#b7c2da;font-size:13.5px}
+.foot-grid a:hover{color:#fff}
+.foot-note{border-top:1px solid #26314b;padding-top:16px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#8794b0}
+.foot-note p{margin:0}
+
+/* back to top */
+#toTop{
+  position:fixed;right:18px;bottom:20px;z-index:90;width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--brand);box-shadow:var(--shadow-l);
+  font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center;
+}
+#toTop.show{display:flex}
+#toTop:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:560px){#toTop{right:12px;bottom:14px}}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="sticky-top">
+  <div class="announce" role="region" aria-label="赛事公告">
+    <div class="wrap">
+      <b>166 fun每日大赛</b>
+      <span class="t">11月8日今日命题「旧物新用」已开题，四赛道提交通道 20:00 关闭<span class="hide-s">；11月7日摄影赛道改用双评委制，结果延至次日上午 10:00 公示。</span></span>
+      <a href="#updates">查看更新</a>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="166 fun每日大赛 首页">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="8" fill="#1b2a52"/>
+          <path d="M9 21V11h3l3.5 5.6L19 11h3v10h-3v-5.4L15.8 20h-.6l-3.2-4.4V21z" fill="#ffb020"/>
+          <circle cx="24.5" cy="9.5" r="2" fill="#e2632a"/>
+        </svg>
+        <span>166 fun每日大赛</span>
+      </a>
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <a href="#overview">赛制概览</a>
+        <a href="#featured">今日精选</a>
+        <a href="#updates">最新更新</a>
+        <a href="#channels">赛道入口</a>
+        <a href="#deep">深度解析</a>
+        <a href="#guide">参赛指南</a>
+        <a href="#faq">常见问题</a>
+        <a href="#comments">选手评论</a>
+      </nav>
+      <div class="head-tools">
+        <form class="searchbox" id="topSearch" role="search" aria-label="站内查找">
+          <input type="search" id="topQ" placeholder="找命题 / 赛道" aria-label="输入关键词查找命题或赛道">
+          <button type="submit">查找</button>
+        </form>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <div>
+        <span class="kicker">每日一轮 · 当日命题 · 四赛道并行</span>
+        <h1 id="heroTitle">166 fun每日大赛</h1>
+        <p class="lead">每天上午九点放出新命题，插画、摄影、文案、短视频四条赛道同日开赛，提交平台为活动站内投稿页，当日晚八点截止。评审当天出分，积分累计进月度榜。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#channels">进入今日赛道</a>
+          <a class="btn btn-ghost" href="#guide">看参赛规则</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>4</b><small>条并行赛道</small></div>
+          <div><b>11 小时</b><small>当日窗口 09:00–20:00</small></div>
+          <div><b>236</b><small>11月7日有效投稿数</small></div>
+          <div><b>3 位</b><small>当日轮值评委</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 380 300" role="img" aria-label="赛事四赛道与计分示意">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffb020" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#e2632a" stop-opacity=".75"/>
+            </linearGradient>
+          </defs>
+          <circle cx="190" cy="150" r="112" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1.5" stroke-dasharray="4 7"/>
+          <circle cx="190" cy="150" r="76" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1.5"/>
+          <g stroke="rgba(255,255,255,.22)" stroke-width="1.4">
+            <line x1="190" y1="150" x2="190" y2="42"/>
+            <line x1="190" y1="150" x2="298" y2="150"/>
+            <line x1="190" y1="150" x2="190" y2="258"/>
+            <line x1="190" y1="150" x2="82" y2="150"/>
+          </g>
+          <circle cx="190" cy="150" r="34" fill="url(#g1)"/>
+          <text x="190" y="147" text-anchor="middle" font-size="12" fill="#1b2a52" font-weight="700">当日</text>
+          <text x="190" y="163" text-anchor="middle" font-size="12" fill="#1b2a52" font-weight="700">命题</text>
+          <g font-size="12.5" fill="#e8eefc" font-weight="600">
+            <rect x="146" y="18" width="88" height="26" rx="13" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.25)"/>
+            <text x="190" y="35" text-anchor="middle">插画赛道</text>
+            <rect x="292" y="137" width="80" height="26" rx="13" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.25)"/>
+            <text x="332" y="154" text-anchor="middle">摄影赛道</text>
+            <rect x="146" y="238" width="88" height="26" rx="13" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.25)"/>
+            <text x="190" y="255" text-anchor="middle">文案赛道</text>
+            <rect x="6" y="137" width="94" height="26" rx="13" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.25)"/>
+            <text x="53" y="154" text-anchor="middle">短视频赛道</text>
+          </g>
+        </svg>
+        <div class="hero-badge">今日命题<b>「旧物新用」</b><br>评审关注改造前后的对照说明</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div class="main-col">
+
+      <!-- overview -->
+      <section class="block" id="overview" aria-labelledby="h-overview">
+        <h2 id="h-overview">赛制概览：一天怎么跑完一轮</h2>
+        <p class="sub">四赛道同日开题、同日截止，评审口径与积分权重按赛道区分。</p>
+        <div class="panel">
+          <p>一轮比赛由命题发布、投稿、评审、积分入账四段组成。11月8日这轮上午 09:00 在投稿页放出题干「旧物新用」，要求作品里能看出原始物件与改造结果；插画交单张或三联，摄影交 3–6 张组图，文案 300 字以内，短视频限 30 秒。稿件提交后不可替换，只允许在 20:00 前撤回重投一次。</p>
+          <div class="grid-3" style="margin-top:14px">
+            <div class="card"><h3>插画赛道</h3><p>单张或三联构图，需附 50 字以内的改造说明，颜色稿优先。</p><span class="meta">11月7日均分 7.9 / 10</span></div>
+            <div class="card"><h3>摄影赛道</h3><p>3–6 张组图，保留原始物件局部，禁止重度合成。</p><span class="meta">11月7日投稿 71 件</span></div>
+            <div class="card"><h3>文案赛道</h3><p>300 字以内，允许第一人称，须出现具体使用场景。</p><span class="meta">11月7日投稿 88 件</span></div>
+          </div>
+          <div class="grid-2" style="margin-top:12px">
+            <div class="card"><h3>短视频赛道</h3><p>30 秒内竖屏，允许剪辑加速，过程镜头不少于全片三分之一。</p><span class="meta">11月7日投稿 52 件</span></div>
+            <div class="card"><h3>积分与晋级</h3><p>单轮前 10 名计积分，月度累计前 30 名进入季赛候选池。</p><span class="meta">10月月度榜首 412 分</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- featured -->
+      <section class="block" id="featured" aria-labelledby="h-featured">
+        <h2 id="h-featured">今日精选：11月7日高分作品回看</h2>
+        <p class="sub">选取 11月7日四赛道排名前列的作品，附评审给出的具体理由。</p>
+        <div class="panel feature">
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/166fun-illus-1107/192/152" width="192" height="152" loading="lazy" alt="插画赛道高分作：旧木椅改造成书架的三联构图">
+            <div>
+              <h3>旧木椅拆成三层书架 <span class="pill">插画 · 9.1 分</span></h3>
+              <p>作者「阿岚的速写本」用三联画交代拆解、拼接、上墙三步，椅背弧线保留为承托角。评委陈默在评语里写「结构交代清楚，三联之间留了同一束光」。</p>
+              <span class="meta">11月7日 19:12 提交 · 评审用时 3 小时</span>
+            </div>
+          </article>
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/166fun-photo-1107/192/152" width="192" height="152" loading="lazy" alt="摄影赛道组图：旧搪瓷盆改花器的六张连续记录">
+            <div>
+              <h3>搪瓷盆补釉后当花器 <span class="pill">摄影 · 8.8 分</span></h3>
+              <p>六张组图从掉瓷、打磨、补釉到栽入薄荷，光线统一在窗边同一位置。争议点在补釉是否算「改造」——评审组 2 票认可、1 票保留。</p>
+              <span class="meta">11月7日 17:40 提交 · <a href="#comments">评论 3 条</a></span>
+            </div>
+          </article>
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/166fun-copy-1107/192/152" width="192" height="152" loading="lazy" alt="文案赛道高分作配图：旧自行车铃铛与钥匙串的静物">
+            <div>
+              <h3>「铃铛还在响，车没了」 <span class="pill">文案 · 8.6 分</span></h3>
+              <p>287 字，写一只旧车铃被装到厨房定时器上。评委周沁标注「结尾两句删掉会更硬」，作者未改稿，保留原版。</p>
+              <span class="meta">11月7日 14:03 提交 · 阅读 1.6 万</span>
+            </div>
+          </article>
+          <article class="fcard">
+            <img src="https://picsum.photos/seed/166fun-video-1107/192/152" width="192" height="152" loading="lazy" alt="短视频赛道截图：旧毛衣拆线重织的连续镜头">
+            <div>
+              <h3>毛衣拆线重织成围巾 <span class="pill">短视频 · 8.9 分</span></h3>
+              <p>28 秒竖屏，拆线镜头 11 秒，占全片近四成，符合过程镜头比例要求。作者「毛线团子」在简介里标了原毛衣购入年份 2013。</p>
+              <span class="meta">11月7日 12:26 提交 · 播放 4.2 万</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- updates -->
+      <section class="block" id="updates" aria-labelledby="h-updates">
+        <h2 id="h-updates">最新更新：规则、时间与结果</h2>
+        <p class="sub">只记录有发布日期与执行范围的变动，不含预告。</p>
+        <div class="panel">
+          <ul class="updates">
+            <li><time datetime="2026-11-08">今天 08:40</time><span>今日命题「旧物新用」上线投稿页，四赛道题干一致，短视频赛道新增「过程镜头不少于全片三分之一」的硬性说明。</span></li>
+            <li><time datetime="2026-11-08">今天 08:05</time><span>月度积分榜刷新：插画赛道「阿岚的速写本」以 412 分居首，较 11月1日榜单上升两位。</span></li>
+            <li><time datetime="2026-11-07">昨天 21:30</time><span>11月7日摄影赛道结果公示延至今日 10:00，原因是新增评委后评分表复核。</span></li>
+            <li><time datetime="2026-11-07">昨天 18:20</time><span>投稿页撤稿按钮修复，此前 16:00–17:10 期间撤稿失败的用户可在 11月9日前申请补投一次。</span></li>
+            <li><time datetime="2026-11-06">11月6日</time><span>文案赛道字数上限由 500 字下调至 300 字，已在 11月6日 09:00 起执行。</span></li>
+            <li><time datetime="2026-11-05">11月5日</time><span>评审名单更新：插画评委陈默续任至 11月30日，摄影赛道增加周沁为第二评委。</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- channels -->
+      <section class="block" id="channels" aria-labelledby="h-channels">
+        <h2 id="h-channels">赛道入口：按题材找今天能交的东西</h2>
+        <p class="sub">九类常见参赛方向，入口指向对应的规则段落与过往高分样本。</p>
+        <div class="panel">
+          <div class="channels">
+            <a href="#guide">旧物改造插画<span>单张 / 三联，附 50 字说明</span></a>
+            <a href="#guide">窗边自然光摄影<span>3–6 张组图，禁重度合成</span></a>
+            <a href="#deep">300 字场景文案<span>须出现具体使用场景</span></a>
+            <a href="#guide">30 秒过程短视频<span>过程镜头≥全片三分之一</span></a>
+            <a href="#featured">家具拆解重拼<span>保留原始连接结构</span></a>
+            <a href="#deep">旧衣拆线重织<span>需标原物购入年份</span></a>
+            <a href="#updates">月度积分冲刺<span>前 30 名进季赛候选池</span></a>
+            <a href="#faq">投稿撤回与补投<span>20:00 前可撤回一次</span></a>
+            <a href="#faq">评审申诉流程<span>公示后 48 小时内提交</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- deep -->
+      <section class="block" id="deep" aria-labelledby="h-deep">
+        <h2 id="h-deep">深度解析：当日命题能不能被「技巧」通过</h2>
+        <p class="sub">以 11月1日以来七轮命题的评分表为样本，拆开一个可被反驳的判断。</p>
+        <div class="panel article">
+          <p>判断先摆出来：<strong>在每日命题赛里，技法的加分上限大约是 2 分，选题贴合度与过程交代合计能到 3.5 分以上。</strong>这个结论来自 11月1日至11月7日共七轮、1,187 件有效投稿的评分明细，不是凭印象。若有人拿出反例，最可能出现在插画赛道——那里单张作品的视觉冲击权重确实比其余三条高。</p>
+
+          <h3>一、七轮评分表的分数分布</h3>
+          <p>评分表分四项：命题贴合（0–4 分）、过程交代（0–3 分）、完成度（0–2 分）、技法表现（0–1 分）。合计 10 分。11月1日到 11月7日的均分是 6.7，其中技法项均分 0.62、完成度项均分 1.45。也就是说，多数人在满分 1 分的技法项上只拿到六成，而完成度几乎人人接近满分，区分度被压到很窄。</p>
+          <table>
+            <caption style="caption-side:top;text-align:left;font-size:13px;color:#5c687f;padding-bottom:6px">11月1日–11月7日四赛道评分项均分</caption>
+            <thead><tr><th>赛道</th><th>命题贴合</th><th>过程交代</th><th>完成度</th><th>技法表现</th></tr></thead>
+            <tbody>
+              <tr><td>插画</td><td>2.9</td><td>1.8</td><td>1.6</td><td>0.72</td></tr>
+              <tr><td>摄影</td><td>3.1</td><td>2.0</td><td>1.5</td><td>0.55</td></tr>
+              <tr><td>文案</td><td>2.6</td><td>1.5</td><td>1.7</td><td>0.48</td></tr>
+              <tr><td>短视频</td><td>3.0</td><td>1.9</td><td>1.4</td><td>0.73</td></tr>
+            </tbody>
+          </table>
+          <p>摄影赛道的命题贴合均分最高，是因为组图天然能放进前后对照；文案赛道最低，230 多件投稿里有 61 件被评委标注「场景抽象」，问题不在文字水平，在于没写出物件原来的使用场合。11月5日命题「厨房里的旧工具」那轮，文案赛道有 14 件作品写到「老式擀面杖」，其中 9 件只写了手感，未给尺寸、材质或使用年份。</p>
+
+          <h3>二、一条规则的前后变化</h3>
+          <p>11月6日文案赛道字数上限从 500 字下调到 300 字，是同一条规则在七天内唯一一次收紧。下调理由是评审单人单日需读完 80 件以上稿件，500 字稿件平均耗时 4 分 20 秒，压到 300 字后降到 2 分 50 秒。副作用已经出现：11月6日、7日两轮里，文案赛道「过程交代」项均分从 1.7 掉到 1.5，字数不够时，作者往往先删掉改造步骤。</p>
+          <blockquote>评委周沁在 11月7日的评审备注里写：「三百字里写清材料、步骤、结果，只剩一句话留给情绪。删哪句，就是作者的选择。」</blockquote>
+
+          <h3>三、被误读的「重合成」边界</h3>
+          <p>摄影赛道禁用重度合成，但规则原文没有给像素级标准。11月3日有一件作品把旧木箱叠到海边背景上，被 3 位评委中的 2 位判为越界，作者申诉称只做了「色温统一」。申诉记录显示，评委复核时依据的是原始文件 EXIF 里的拍摄地与背景地不一致，而非画面观感。这条判例在 11月4日被写进摄影赛道说明页：<strong>背景替换、主体拼贴、生成式补全三类都算重度合成，调色、裁切、去污不算。</strong></p>
+
+          <h3>四、把判断拆成可核对的三条</h3>
+          <ul class="checklist">
+            <li>命题贴合占 4 分，是四项里唯一超过 3 分的，评语里出现「看不出原物」即可扣 2 分以上。</li>
+            <li>过程交代占 3 分，短视频赛道要求过程镜头≥三分之一，是唯一有量化门槛的赛道。</li>
+            <li>技法表现只占 1 分，七轮均分 0.62，靠技法翻盘的窗口小于靠选题补正的窗口。</li>
+          </ul>
+          <p>反过来说，这套权重也有失效场合。11月2日命题「一张纸的极限」那轮，插画赛道前五名里有三件几乎没写过程说明，靠单张画面的信息密度拿到 8 分以上。命题越抽象，技法项的隐性权重越高——这是评分表没写、但七轮数据里能看出来的部分。真要改规则，先动的是过程交代的 3 分怎么在抽象命题下折算，而不是继续加技法上限。</p>
+        </div>
+      </section>
+
+      <!-- guide -->
+      <section class="block" id="guide" aria-labelledby="h-guide">
+        <h2 id="h-guide">体验指南：第一次参赛的六步</h2>
+        <p class="sub">从看题到积分入账，按当日时间线排。</p>
+        <div class="panel">
+          <ol class="steps">
+            <li><b>09:00 看题。</b>投稿页顶部会显示当日命题与三条附加说明，附加说明每天不同，11月8日要求作品里出现原物的至少一个原始部件。</li>
+            <li><b>09:30 选赛道。</b>同一账号当日只能选一条赛道提交，改赛道需在 12:00 前撤回。四赛道评审不是同一批人，插画评委陈默、摄影评委周沁、文案评委轮值。</li>
+            <li><b>12:00 前定稿方向。</b>摄影赛道组图建议在自然光窗口期完成，11月7日 71 件摄影投稿里有 46 件拍摄时间集中在 12:00–15:00。</li>
+            <li><b>提交时写清原物信息。</b>购入年份、材质、原始用途三项至少写两项，缺项会被标注「信息不全」，扣 0.5 分。</li>
+            <li><b>20:00 前可撤回一次。</b>撤回后重投算新稿件，评审从头看，11月7日有 19 人使用过撤回。</li>
+            <li><b>次日 10:00 看结果。</b>单轮前十名进入当日精选，积分在结果公示后 30 分钟内入账。</li>
+          </ol>
+          <div class="compare" style="margin-top:16px">
+            <div>
+              <h4>更容易拿分的做法</h4>
+              <ul>
+                <li>原物与成品同框，至少一张</li>
+                <li>过程镜头按秒数算，不按镜头数</li>
+                <li>文案里写尺寸、年份、使用频次</li>
+                <li>提交前检查附加说明是否逐条对应</li>
+              </ul>
+            </div>
+            <div>
+              <h4>常见扣分点</h4>
+              <ul>
+                <li>只给成品图，看不出原物</li>
+                <li>短视频过程镜头不足三分之一</li>
+                <li>文案场景抽象，无具体使用场合</li>
+                <li>摄影背景替换未声明</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="block" id="faq" aria-labelledby="h-faq">
+        <h2 id="h-faq">常见问题</h2>
+        <p class="sub">按提问频率排列，答案以规则原文为准。</p>
+        <div class="panel" style="background:transparent;border:0;box-shadow:none;padding:0">
+          <details class="faq" open>
+            <summary>命题里的「旧物」有没有年份限制？</summary>
+            <div class="a">旧物指购入或使用满两年以上的物件，需在提交信息里写明年份。11月8日这轮不限制品类，但食品、药品与一次性用品不在范围内。若无法确认购入年份，可用第一次使用的年份代替，评委按自述处理。</div>
+          </details>
+          <details class="faq">
+            <summary>同一天能不能投两条赛道？</summary>
+            <div class="a">一个账号当日只能提交一条赛道的作品。12:00 前可撤回并改投其他赛道，撤回记录会保留在账号页。11月7日有 7 人改投，其中 5 人改到摄影赛道。</div>
+          </details>
+          <details class="faq">
+            <summary>摄影赛道的「重度合成」怎么判定？</summary>
+            <div class="a">背景替换、主体拼贴、生成式补全三类都算重度合成，调色、裁切、去污不算。判定依据包括原始文件 EXIF 与画面一致性，11月3日的申诉案例已写进赛道说明页。</div>
+          </details>
+          <details class="faq">
+            <summary>短视频必须竖屏吗？</summary>
+            <div class="a">竖屏是建议，不是硬性要求。硬性要求只有两条：全片 30 秒以内，过程镜头不少于全片三分之一。横屏作品在评审时不会被额外扣分，但精选页展示位按竖屏排版，横屏会留白。</div>
+          </details>
+          <details class="faq">
+            <summary>积分怎么算，掉榜会不会清零？</summary>
+            <div class="a">单轮前十名按名次计 12 到 3 分不等，未进前十不计分。月度榜按自然月累计，跨月不清零的是总积分，月度排名每月 1 日重置。10月月度榜首总积分 412 分。</div>
+          </details>
+          <details class="faq">
+            <summary>对评分有异议怎么申诉？</summary>
+            <div class="a">结果公示后 48 小时内，在作品页提交申诉，写明具体评分项与理由。申诉由未参与该轮评审的第四位评委复核，复核结果只改分、不改名次排序之外的其他内容。11月1日至7日共收到 23 条申诉，改分 4 条。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- comments -->
+      <section class="block" id="comments" aria-labelledby="h-comments">
+        <h2 id="h-comments">选手评论：11月7日那轮之后</h2>
+        <p class="sub">来自作品页与选手群的公开留言，保留原话。</p>
+        <div class="comments">
+          <div class="comment">
+            <div class="who"><span class="avatar">岚</span><b>阿岚的速写本</b> · 11月8日 09:22</div>
+            <p>三联画那组我把椅背弧线留成了承托角，评语说「三联之间留了同一束光」，其实是我家窗户只有下午三点那会儿有光，三张都是同一时间拍的参考。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">毛</span><b>毛线团子</b> · 11月8日 08:51</div>
+            <p>毛衣是 2013 年买的，拆线拆了两个晚上，手指磨破。28 秒里拆线给了 11 秒，差点因为超时剪掉开头。规则里过程镜头按比例算，这条挺关键。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">老</span><b>老周拍旧物</b> · 11月7日 22:10</div>
+            <p>搪瓷盆那组补釉到底算不算改造，我还是不服。补的是釉，不是把盆改成别的东西。评委两票认一票保留，这判定标准能不能写细一点。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">南</span><b>南窗写字</b> · 11月7日 20:44</div>
+            <p>文案压到 300 字以后，步骤根本写不完。11月6日那轮我删掉了打磨环节，过程分直接掉了。字数限制和过程交代权重是打架的。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">小</span><b>小柯不加班</b> · 11月7日 19:05</div>
+            <p>第一次投，选的是插画。不知道要写原物年份，被标了信息不全扣 0.5 分。建议投稿页把三项必填做成红字，别藏在说明里。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">木</span><b>木工房阿德</b> · 11月7日 16:32</div>
+            <p>旧木椅拆成书架那件的连接方式我看了三遍，椅腿横撑当层板托，受力方向是对的。这比画得好看更值分，可惜技法项只占 1 分。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- news -->
+      <section class="block" id="news" aria-labelledby="h-news">
+        <h2 id="h-news">相关资讯：同期赛事与行业动态</h2>
+        <p class="sub">同一时间段内与旧物改造题材相关的外部信息。</p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>城市旧物市集 11月14日开摊</h3>
+            <p>主办方公布 42 个摊位名单，其中 11 个摊位接受赛事作品现场展示，需在 11月10日前报名。</p>
+            <span class="meta">来源：市集公告 · 11月6日</span>
+          </div>
+          <div class="card">
+            <h3>某高校设计课把旧物改造列入期末课题</h3>
+            <p>课程要求 3 人一组完成一件家具级改造，评分含材料溯源，与赛事的过程交代权重接近。</p>
+            <span class="meta">来源：课程页 · 11月5日</span>
+          </div>
+          <div class="card">
+            <h3>短视频平台上线「过程镜头」标签</h3>
+            <p>11月4日起，带该标签的改造类视频在推荐页获得单独入口，标签审核要求全程无剪辑跳跃。</p>
+            <span class="meta">来源：平台创作者中心 · 11月4日</span>
+          </div>
+          <div class="card">
+            <h3>旧衣回收点新增 18 处</h3>
+            <p>本月经确认新增回收点，可开具回收凭证，凭证可作为赛事文案赛道「原物来源」的辅助材料。</p>
+            <span class="meta">来源：回收点公示 · 11月3日</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- recommend -->
+      <section class="block" id="recommend" aria-labelledby="h-recommend">
+        <h2 id="h-recommend">相关推荐</h2>
+        <p class="sub">按你可能正在准备的题材给出直达入口。</p>
+        <div class="panel">
+          <ul class="tags">
+            <li><a href="#guide" class="hot">旧物改造插画三联构图</a></li>
+            <li><a href="#guide">窗边自然光组图拍法</a></li>
+            <li><a href="#deep">300 字改造文案怎么写</a></li>
+            <li><a href="#guide">30 秒过程短视频剪辑</a></li>
+            <li><a href="#featured">旧木椅拆解重拼案例</a></li>
+            <li><a href="#featured">旧毛衣拆线重织案例</a></li>
+            <li><a href="#faq">摄影重度合成判定标准</a></li>
+            <li><a href="#faq">积分榜月度重置规则</a></li>
+            <li><a href="#comments">11月7日摄影赛道争议</a></li>
+            <li><a href="#updates">文案赛道字数下调</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- timeline -->
+      <section class="block" id="timeline" aria-labelledby="h-timeline">
+        <h2 id="h-timeline">七日赛程时间线</h2>
+        <p class="sub">11月1日至11月8日，每天一轮的命题与结果记录。</p>
+        <div class="panel">
+          <ul class="timeline">
+            <li><time datetime="2026-11-08">11月8日</time>命题「旧物新用」，四赛道同日开放，20:00 截止，结果明日上午 10:00 公示。</li>
+            <li><time datetime="2026-11-07">11月7日</time>命题「家里最旧的一件东西」，有效投稿 236 件，摄影赛道改用双评委制。</li>
+            <li><time datetime="2026-11-06">11月6日</time>命题「厨房里的旧工具」，文案赛道字数上限调整为 300 字。</li>
+            <li><time datetime="2026-11-05">11月5日</time>命题「一件穿旧的衣物」，短视频赛道过程镜头比例首次纳入评分。</li>
+            <li><time datetime="2026-11-04">11月4日</time>命题「拆开再装回去」，摄影赛道说明页补入重度合成判定条款。</li>
+            <li><time datetime="2026-11-03">11月3日</time>命题「补过的痕迹」，一件合成作品引发申诉，成为后续判例来源。</li>
+            <li><time datetime="2026-11-02">11月2日</time>命题「一张纸的极限」，插画赛道前五名中三件未附过程说明。</li>
+            <li><time datetime="2026-11-01">11月1日</time>命题「祖辈留下的物件」，七轮统计的起始轮次，均分 6.5。</li>
+          </ul>
+        </div>
+      </section>
+
+    </div><!-- /main-col -->
+
+    <!-- SIDEBAR -->
+    <aside class="aside" aria-label="侧边栏">
+      <div class="side-card">
+        <h2>站内查找</h2>
+        <form class="side-search" id="sideSearch" role="search" aria-label="查找命题或赛道">
+          <input type="search" id="sideQ" placeholder="如：补釉、三联、积分" aria-label="输入关键词查找站内内容">
+          <button type="submit">查找</button>
+        </form>
+        <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+      </div>
+
+      <nav class="side-card" aria-label="栏目导航">
+        <h2>栏目导航</h2>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="#overview">赛制概览</a></li>
+          <li><a href="#featured">今日精选</a></li>
+          <li><a href="#updates">最新更新</a></li>
+          <li><a href="#channels">赛道入口</a></li>
+          <li><a href="#deep">深度解析</a></li>
+          <li><a href="#guide">体验指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#comments">选手评论</a></li>
+          <li><a href="#news">相关资讯</a></li>
+          <li><a href="#recommend">相关推荐</a></li>
+          <li><a href="#timeline">七日时间线</a></li>
+        </ul>
+      </nav>
+
+      <div class="side-card">
+        <h2>11月7日赛道榜</h2>
+        <ol class="rank">
+          <li><span class="num">1</span><span class="n">插画 · 旧木椅成书架</span><span class="v">9.1</span></li>
+          <li><span class="num">2</span><span class="n">短视频 · 毛衣重织</span><span class="v">8.9</span></li>
+          <li><span class="num">3</span><span class="n">摄影 · 搪瓷盆补釉</span><span class="v">8.8</span></li>
+          <li><span class="num">4</span><span class="n">文案 · 旧车铃定时器</span><span class="v">8.6</span></li>
+          <li><span class="num">5</span><span class="n">插画 · 旧窗框成镜架</span><span class="v">8.5</span></li>
+        </ol>
+      </div>
+
+      <div class="side-card">
+        <h2>热门长尾入口</h2>
+        <div class="side-links">
+          <a href="#deep">过程交代计分</a>
+          <a href="#faq">重度合成判定</a>
+          <a href="#guide">撤回重投</a>
+          <a href="#updates">双评委制</a>
+          <a href="#featured">组图前后对照</a>
+          <a href="#timeline">月度积分</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#ffb020"/>
+            <path d="M9 21V11h3l3.5 5.6L19 11h3v10h-3v-5.4L15.8 20h-.6l-3.2-4.4V21z" fill="#1b2a52"/>
+          </svg>
+          166 fun每日大赛
+        </div>
+        <p style="max-width:30ch;line-height:1.7">每天一条命题，四条赛道，当日出分；比的是把旧东西讲清楚。</p>
+      </div>
+      <div>
+        <h3>参赛</h3>
+        <ul>
+          <li><a href="#channels">今日赛道入口</a></li>
+          <li><a href="#guide">六步参赛指南</a></li>
+          <li><a href="#deep">评分权重解析</a></li>
+          <li><a href="#updates">规则变动记录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>参考</h3>
+        <ul>
+          <li><a href="#featured">11月7日高分作品</a></li>
+          <li><a href="#comments">选手评论</a></li>
+          <li><a href="#timeline">七日赛程时间线</a></li>
+          <li><a href="#recommend">相关推荐标签</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>说明</h3>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#news">相关资讯</a></li>
+          <li><a href="#overview">赛制概览</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <p>页面内作品条目、选手昵称、分数与投稿量为示例数据，仅用于说明赛制结构，不代表真实排名。</p>
+      <p>更新时间 2026-11-08 · 对应正文更新项：今日命题上线、积分榜刷新</p>
+    </div>
+    <div class="foot-note" style="border-top:0;padding-top:6px">
+      <p>© 2026 166 fun每日大赛</p>
+      <p>内容以当日投稿页公告为准</p>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  if(menuBtn && mainNav){
+    menuBtn.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.matchMedia('(max-width:900px)').matches){
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY > 480){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function highlight(){
+    var pos = window.scrollY + (document.querySelector('.sticky-top').offsetHeight || 0) + 80;
+    var idx = -1;
+    for(var i=0;i<sections.length;i++){
+      if(sections[i].offsetTop <= pos) idx = i;
+    }
+    sideLinks.forEach(function(a,i){ a.classList.toggle('on', i === idx); });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  window.addEventListener('resize', highlight);
+  highlight();
+
+  var topForm = document.getElementById('topSearch');
+  var sideForm = document.getElementById('sideSearch');
+  var feedback = document.getElementById('searchFeedback');
+  var index = [
+    {k:'旧物改造插画 三联 构图 原物 年份', id:'#featured', t:'今日精选'},
+    {k:'窗边自然光 摄影 组图 搪瓷盆 补釉', id:'#featured', t:'今日精选'},
+    {k:'300字 文案 场景 旧车铃 定时器', id:'#featured', t:'今日精选'},
+    {k:'30秒 过程短视频 毛衣 拆线 重织', id:'#featured', t:'今日精选'},
+    {k:'评分权重 命题贴合 过程交代 技法 均分', id:'#deep', t:'深度解析'},
+    {k:'摄影 重度合成 背景替换 申诉 判定', id:'#faq', t:'常见问题'},
+    {k:'撤回 重投 12:00 20:00 截止', id:'#guide', t:'体验指南'},
+    {k:'积分 月度榜 412 重置 晋级', id:'#overview', t:'赛制概览'},
+    {k:'双评委制 摄影 结果延期 11月7日', id:'#updates', t:'最新更新'},
+    {k:'字数 300 下调 11月6日 文案', id:'#updates', t:'最新更新'},
+    {k:'七日 时间线 命题目录', id:'#timeline', t:'七日赛程时间线'},
+    {k:'旧物市集 回收点 改造课程', id:'#news', t:'相关资讯'}
+  ];
+  function doSearch(q){
+    q = (q||'').trim().toLowerCase();
+    if(!q){ if(feedback) feedback.textContent = '请输入关键词，如“补釉”“三联”“积分”。'; return; }
+    var hit = index.filter(function(item){ return item.k.indexOf(q) > -1; });
+    if(hit.length === 0){
+      if(feedback) feedback.textContent = '没有找到与“' + q + '”相关的命题或赛道，试试“补釉”“撤回”“积分”。';
+      return;
+    }
+    var first = hit[0];
+    if(feedback) feedback.textContent = '找到 ' + hit.length + ' 条，已定位到“' + first.t + '”。';
+    var el = document.querySelector(first.id);
+    if(el){
+      var offset = (document.querySelector('.sticky-top').offsetHeight || 0) + 14;
+      var y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({top:y, behavior:'smooth'});
+    }
+  }
+  if(topForm){
+    topForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      doSearch(document.getElementById('topQ').value);
+    });
+  }
+  if(sideForm){
+    sideForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      doSearch(document.getElementById('sideQ').value);
+    });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"166 fun每日大赛",
+  "description":"每天一轮主题创作挑战赛，覆盖插画、摄影、文案、短视频四类赛道，公布当日命题、评审口径、参赛流程与积分榜。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"命题里的「旧物」有没有年份限制？",
+      "acceptedAnswer":{"@type":"Answer","text":"旧物指购入或使用满两年以上的物件，需在提交信息里写明年份。11月8日这轮不限制品类，但食品、药品与一次性用品不在范围内。若无法确认购入年份，可用第一次使用的年份代替。"}
+    },
+    {
+      "@type":"Question",
+      "name":"同一天能不能投两条赛道？",
+      "acceptedAnswer":{"@type":"Answer","text":"一个账号当日只能提交一条赛道的作品。12:00 前可撤回并改投其他赛道，撤回记录会保留在账号页。11月7日有 7 人改投，其中 5 人改到摄影赛道。"}
+    },
+    {
+      "@type":"Question",
+      "name":"摄影赛道的「重度合成」怎么判定？",
+      "acceptedAnswer":{"@type":"Answer","text":"背景替换、主体拼贴、生成式补全三类都算重度合成，调色、裁切、去污不算。判定依据包括原始文件 EXIF 与画面一致性。"}
+    },
+    {
+      "@type":"Question",
+      "name":"短视频必须竖屏吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"竖屏是建议，不是硬性要求。硬性要求只有两条：全片 30 秒以内，过程镜头不少于全片三分之一。"}
+    },
+    {
+      "@type":"Question",
+      "name":"积分怎么算，掉榜会不会清零？",
+      "acceptedAnswer":{"@type":"Answer","text":"单轮前十名按名次计 12 到 3 分不等，未进前十不计分。月度榜按自然月累计，总积分跨月不清零，月度排名每月 1 日重置。"}
+    },
+    {
+      "@type":"Question",
+      "name":"对评分有异议怎么申诉？",
+      "acceptedAnswer":{"@type":"Answer","text":"结果公示后 48 小时内，在作品页提交申诉，写明具体评分项与理由。申诉由未参与该轮评审的第四位评委复核。"}
+    }
+  ]
+}
+</script>
+</body>
+  </html>
